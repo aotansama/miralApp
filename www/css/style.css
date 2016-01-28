@@ -44,7 +44,23 @@ IONIC Custom
 color: #0c60ee;
 }
 
+/*************************************
+user login
+**************************************/
+.user-login-inputframe {
+	border-collapse: collapse;
+	border-spacing: 0;
+	border:1px solid;
+}
 
+.user-login-inputframe tr td{
+	padding:4px;
+	height:60px;
+	text-align:center;
+	vertical-align: middle;
+	color:#448AFF;
+	background-color:#fff;
+}
 
 /*************************************
 Top Page

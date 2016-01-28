@@ -4,13 +4,10 @@
 </ion-header-bar>
 <div ng-switch="viewNo">
 <ion-content ng-switch-when="1">
-１ページ目
+<div ng-include src="'basic.html'"></div>
 </ion-content>
 <ion-content ng-switch-when="2">
-２ページ目
-</ion-content>
-<ion-content ng-switch-when="3">
-３ページ目
+<div ng-include src="'con.html'"></div>
 </ion-content>
 </div>
 </ion-view>

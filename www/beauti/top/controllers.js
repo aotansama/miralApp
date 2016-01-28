@@ -1,6 +1,6 @@
 angular.module('miral.beauti.top.controllers', [])
 
-.controller('beautiTopCtrl-init', function($scope,$window, $state, $timeout, $ionicSideMenuDelegate) {
+.controller('beautiTopCtrl', function($scope,$window, $state, $timeout, $ionicSideMenuDelegate) {
 
 	console.log('Start TopCtrl');
 

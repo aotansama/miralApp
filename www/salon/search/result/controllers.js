@@ -1,9 +1,9 @@
 angular.module('miral.salon.search.result.controllers', ['miral.salon.search.result.services'])
 
-.controller('salonSearchResultControllers-init', function($scope, $stateParams, salonSearchResultServices) {
+.controller('salonSearchResultControllers', function($scope, $stateParams, salonSearchResultServices) {
 
 
-	console.log('Start salonSearchResultControllers-init');
+	console.log('Start salonSearchResultControllers');
 
 	$scope.salons = salonSearchResultServices.getResult();
 

@@ -3,7 +3,7 @@ angular.module('miral.salon.detail.controllers', ['miral.salon.detail.services'
                                              ])
 
 
-.controller('salonDetailControllers-init', function($scope, $stateParams, $ionicSlideBoxDelegate, salonDetailServices) {
+.controller('salonDetailControllers', function($scope, $stateParams, $ionicSlideBoxDelegate, salonDetailServices) {
 
 	$scope.timestamp = new Date().getTime();
 

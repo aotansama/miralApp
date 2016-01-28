@@ -4,6 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 angular.module('miral', ['ionic','ngAnimate', 'ionicLazyLoad', 'ionic.rating'
+                         ,'miral.user.login.controllers'
                          ,'miral.beauti.top.controllers'
                          ,'miral.salon.search.result.controllers'
                          ,'miral.salon.detail.controllers'
@@ -40,20 +41,30 @@ angular.module('miral', ['ionic','ngAnimate', 'ionicLazyLoad', 'ionic.rating'
 
 
   ///////////////////////////////////////////////////////
+  //カテゴリ：ユーザー
+
+  //ログイン画面
+  .state('user-login', {
+	    url: '/useri/lgoin',
+	    templateUrl: 'user/login/login.html',
+	    controller: 'userLoginControllers'
+	  })
+
+  ///////////////////////////////////////////////////////
   //カテゴリ：美容師
 
   //TOP画面
   .state('beauti-top', {
 	    url: '/beauti/top',
 	    templateUrl: 'beauti/top/top.html',
-	    controller: 'beautiTopCtrl-init'
+	    controller: 'beautiTopCtrl'
 	  })
 
-  //登録画面
+  //美容師 新規登録画面
   .state('beauti-regist', {
 	    url: '/beauti/regist',
 	    templateUrl: 'beauti/regist/main.html',
-	    controller: 'beautiTopCtrl-init'
+	    controller: 'beautiTopCtrl'
 	  })
 
   ///////////////////////////////////////////////////////
@@ -63,21 +74,21 @@ angular.module('miral', ['ionic','ngAnimate', 'ionicLazyLoad', 'ionic.rating'
   .state('salon-search-result', {
 	    url: '/salon/search/result',
 	    templateUrl: 'salon/search/result/search-result.html',
-	    controller: 'salonSearchResultControllers-init'
+	    controller: 'salonSearchResultControllers'
   })
 
   //サロン詳細情報
   .state('salon-detail', {
 	    url: '/salon/detail/:slId',
 	    templateUrl: 'salon/detail/detail.html',
-	    controller: 'salonDetailControllers-init'
+	    controller: 'salonDetailControllers'
   })
 
   ;
 
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/beauti/top');
+  $urlRouterProvider.otherwise('/useri/lgoin');
 
 })
 .directive("scrollView", function($window){
