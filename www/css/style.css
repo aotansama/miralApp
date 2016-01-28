@@ -1,0 +1,274 @@
+@charset "utf-8";
+/* Empty. Add your own CSS if you like */
+
+/*************************************
+Common★
+**************************************/
+.hideDom {
+	display:none;
+}
+
+.ng-hide-add, .ng-hide-remove {
+    /* ensure visibility during the transition */
+    display: block !important; /* yes, important */
+}
+
+.windowSlideUp{
+	max-height:400px;
+	-moz-transition: .5s linear all;
+    -ms-transition: .5s linear all;
+    -o-transition: .5s linear all;
+    -webkit-transition: .5s linear all;
+    transition: .5s linear all;
+}
+
+.windowSlideUp.ng-hide {
+	max-height:0px;
+}
+
+.item .wrapping-text{
+	overflow: initial;
+    white-space: initial;
+}
+
+/*************************************
+IONIC Custom
+**************************************/
+
+.slider-pager
+{
+ color: #000;
+}
+.slider-pager-page.active
+{
+color: #0c60ee;
+}
+
+
+
+/*************************************
+Top Page
+**************************************/
+.searchTextBox-base .searchTextBox.fixed {
+	position:fixed;
+	top:0;
+	z-index:9999;
+}
+
+
+.top-MyNave{
+	width:40px;
+	height:40px;
+	position:fixed;
+	box-shadow:0px 0px 10px;
+}
+
+
+.top-View {
+	padding:0px;
+}
+
+
+.top-sidMenu > .item-content {
+	background-color:#2196f3 !important;
+
+}
+.top-sidMenu > .item-complex .item-content
+{
+	background-color:#2196f3  !important;
+	color: #fff;
+}
+
+
+.top-contentImage {
+	font-weight:bold;
+	width:100%;
+	height:200px;
+	border-top:1px solid #fff;
+	text-align:center;
+}
+.top-contentImage > .comment{
+	position:relative;
+	color:#fff;
+	top:50%;
+}
+.top-contentImage > .ownerBtn{
+	position:relative;
+	top:120px;
+}
+
+
+.top-comment-bar-1 {
+	height:50px;
+	text-align: center;
+	padding:4px;
+	color:#FFF;
+	background-color:#3F51B5;
+}
+
+.top-contentImage div{
+	font-size:10pt;
+	color:#FF4081;
+}
+
+.top-SlideImg {
+	width:100%;
+}
+
+.top-logoffBox {
+	margin-top:10px;
+	width:100%;
+	border-top:1px solid #fff;
+	text-align:center;
+}
+
+
+/*************************************
+Salon searchListCard
+**************************************/
+.solon-searchListCard {
+	height:200px;;
+	background-size:contain;
+	padding:0px;
+}
+
+.solon-searchListCard > .salonName {
+	position:relative;
+	top:0px;
+	margin-top:0px;
+	padding:2px 4px;
+	padding-left:4pf;
+	background-color:#283593;
+	opacity:0.8;
+	width:100%;
+}
+
+.solon-searchListCard > .salonName2 {
+	background-color:#0277bd;
+}
+
+.solon-searchListCard > .salonName > span{
+	color:#fff;
+	opacity:1;
+}
+
+.solon-searchListCard > .footer {
+	height:45px;;
+	position:relative;
+	top:100px;
+	opacity:0.8;
+	background-color:#283593;
+	width:100%;
+}
+.solon-searchListCard > .footer2 {
+	background-color:#0277bd;
+}
+
+.solon-searchListCard > .footer > .salonRentalfee{
+	color:#fff;
+	opacity:1;
+	width:100%;
+}
+.solon-searchListCard > .footer > .salonRentalfee > div{
+	text-align:center;
+}
+
+.solon-searchListCard > ul.rating li i {
+	font-size:10pt;
+	color:#FBC02D;
+}
+
+/*************************************
+Salon Detail
+**************************************/
+.slideImgCmt {
+width:100%;
+color:#fff;
+background-color:#757575;
+padding:2px 2px 0px 4px;
+}
+
+.slideImgCmt p{
+width:90%;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+-webkit-text-overflow: ellipsis;
+-o-text-overflow: ellipsis;
+margin:0px;
+
+}
+
+.salonDetail .review  ul.rating {
+}
+
+.salonDetail .review  p.comment {
+	margin-top:0px;
+	font-size:9pt;
+}
+
+.salonDetail .review  p.useCount {
+	margin-left:10px;
+	font-size:9pt;
+}
+
+
+.salonDetail .review  ul.rating li {
+	padding:5px 5px;
+}
+.salonDetail .review  ul.rating li i {
+	font-size:12pt;
+	color:#FBC02D;
+	margin-right:4px;
+}
+
+
+.salonDetail .salonName {
+	padding:2px 4px;
+	background-color:#283593;
+	width:100%;
+	color:#fff;
+}
+
+.salonDetail .salonRentalfee{
+	background-color:#3949AB;
+	color:#fff;
+	width:100%;
+}
+
+.salonDetail .salonRentalfee > div{
+	text-align:center;
+}
+
+.salonDetail .rating  {
+	margin-top:4px;
+	margin-bottom:4px;
+	color:#64B5F6;
+	text-align:center;
+}
+
+.salonDetail .rating > ul.rating {
+	color:#FBC02D;
+}
+
+.salonDetail .rating > ul.rating li i {
+	font-size:20pt;
+}
+
+.salonDetail .slideImg {
+	width:100%;
+}
+
+
+.item-stacked-label-blue  > .input-label{
+color:#64B5F6;
+font-size:9.5pt;
+}
+
+.salonDetail .map-box {
+width: 100%;
+height: 0;
+padding-bottom: 100%;
+}
+
+

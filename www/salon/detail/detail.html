@@ -1,0 +1,127 @@
+ <ion-view>
+  <ion-content class="padding salonDetail" >
+
+  <div>
+  	<ion-slide-box does-continue="true" auto-play="true" >
+		  <ion-slide ng-repeat="image in salon.imagelist">
+			<div class="slideImgCmt"><p>{{::image.cmt}}</p></div>
+			<img class="slideImg"" ng-src="{{::image.path}}?t={{::timestamp}}">
+		  </ion-slide>
+	</ion-slide-box>
+ </div>
+
+ 	   		<div style="margin-top:2px" class="salonName" >
+     		<span>{{::salon.slNm}}</span>
+     		</div>
+
+     		<div class="salonRentalfee">
+     		<div style="padding:0px" class="row">
+     		<div class="col icon-left ion-social-yen">{{::salon.rentalFee.h1}}</div>
+     		<div class="col icon-left ion-social-yen">{{::salon.rentalFee.d1}}</div>
+     		<div class="col icon-left ion-social-yen">{{::salon.rentalFee.d2}}</div>
+     		</div>
+     		<div style="padding:0px;" class="row">
+     		<div style="padding:0px;font-size:9pt;" class="col">時間貸し</div>
+     		<div style="padding:0px;font-size:9pt;" class="col">１日貸し</div>
+     		<div style="padding:0px;font-size:9pt;" class="col">連日(２日以降)</div>
+     		</div>
+     		</div>
+
+		<div class="rating">
+			<div style="font-weight:bold">サロン 総合評価</div>
+	 		<rating  ng-model="salon.rating" readonly="true"></rating>
+	 		<label><span class="">レビュー数：</span>
+	 		<span>12件</span></label>
+		</div>
+
+    <div class="list">
+		<label class="item item-icon-right item-stacked-label item-stacked-label-blue">
+		<span class="input-label">最寄り駅</span>
+		<p>{{::salon.trNm}}</p>
+		<i class="icon ion-android-more-horizontal" on-tap="showAccess()"></i>
+		<div style="font-size:10pt;" class="wrapping-text windowSlideUp"  ng-show="isShowAccess">{{::salon.accs}}</div>
+  		</label>
+
+		<label class="item item-icon-right item-stacked-label item-stacked-label-blue">
+		<span class="input-label">住所</span>
+		<p>{{::salon.addr}}</p>
+		<i class="icon ion-android-locate" on-tap="showMap({{::salon.lat}},{{::salon.lng}})"></i>
+		<div class="windowSlideUp"  ng-show="isShowMap">
+		<div id="slonDetailMap" class="map-box"></div>
+		</div>
+  		</label>
+
+
+		<label class="item item-icon-right item-stacked-label item-stacked-label-blue">
+		<span class="input-label">電話番号</span>
+		<p>{{::salon.tel}}</p>
+		<i class="icon ion-android-call"></i>
+  		</label>
+		<label class="item item-stacked-label item-stacked-label-blue">
+		<span class="input-label">お店のホームページ</span>
+		<div><a>{{::salon.url}}</a></div>
+  		</label>
+	</div>
+
+	<div class="card">
+	  <div class="item item-divider">
+	    お店について
+	  </div>
+	  <div class="item item-text-wrap">
+	    {{::salon.aboutSalon}}
+	  </div>
+	</div>
+
+
+	<div class="card">
+	  <div class="item item-divider">
+	    代表者から一言
+	  </div>
+	 <div class="item item-avatar">
+	    <img src="{{::salon.owner.img}}">
+	    <h2>{{::salon.owner.name}}</h2>
+	    <p>{{::salon.owner.position}}</p>
+	  </div>
+	 <div class="item item-body">
+	    {{::salon.owner.comment}}
+	 </div>
+	</div>
+
+	<button class="button button-block button-positive">
+	  新たにコンタクトする
+	</button>
+	<button class="button button-block button-energized">
+	  予約をする
+	</button>
+	<div class="card review">
+	  <div class="item item-divider">
+	    最新のレビュー
+	  </div>
+	 <div class="item item-avatar">
+	    <img src="{{::salon.review.img}}">
+	    <h2>{{::salon.review.name}}</h2>
+	    <div style="border-top:1px solid;">
+	    <table><tr><td>
+	    <rating ng-model="salon.review.rating" readonly="true"></rating>
+	    </td>
+	    <td>
+	    <p class="useCount">当サロン利用回数：{{::salon.review.useCnt}}</p>
+	    </td></tr></table>
+	    </div>
+	  </div>
+	 <div class="item item-body">
+	 	<p class="comment" ng-bind-html="salon.review.comment"></p>
+	 <div >
+		<button class="button button-outline button-positive">
+		  全てのレビュー
+		</button>
+	 </div>
+	 </div>
+	</div>
+<!--
+  	<span>{{rev_date1.date}}</span>
+	<calendar1 month-count="3" monthview-cfg="monthViewConf" dayview-cfg="dayViewConf" ng-model="rev_date1"
+					month-event-load="calendarMonthEventLoad(month,calendar1DayInfoHander)"></calendar1>
+ -->
+  </ion-content>
+</ion-view>

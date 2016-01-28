@@ -1,0 +1,101 @@
+<ion-view  hide-nav-bar="true"  class="top-View">
+<ion-nav-bar></ion-nav-bar><!-- これとenable-menu-with-back-viewsないと検索結果にback buttonが表示されない -->
+<ion-side-menus enable-menu-with-back-views="true">
+
+<ion-side-menu-content>
+
+<ion-content lazy-scroll scroll-view scroll-event="scrollFnc" >
+<ion-slide-box  style="height:200px" does-continue="true" auto-play="true" on-slide-changed="">
+  <ion-slide>
+    <div class="box"><img class="top-SlideImg" src="beauti/top/img/portfolio-14.jpg?t={{::timestamp}}"></div>
+  </ion-slide>
+  <ion-slide>
+    <div class="box"><img  class="top-SlideImg" src="beauti/top/img/portfolio-15.jpg?t={{::timestamp}}"></div>
+  </ion-slide>
+  <ion-slide>
+    <div class="box"><img  class="top-SlideImg" src="beauti/top/img/portfolio-16.jpg?t={{::timestamp}}"></div>
+  </ion-slide>
+</ion-slide-box>
+
+<div id="topSearchTextBoxBase" class="bar item-input-inset searchTextBox-base">
+</div>
+
+<div class="top-comment-bar-1">
+- 渋谷・恵比寿・代官山・原宿 -<br>人気エリアサロンが充実
+</div>
+<div class="top-contentImage"  image-lazy-src="beauti/top/img/portfolio-20.jpg?t={{timestamp}}" image-lazy-background-image="true" >
+<h3 class="comment">人気エリアにある<br>サロン</h3>
+</div>
+<div class="top-contentImage" image-lazy-src="beauti/top/img/portfolio-19.jpg?t={{timestamp}}" image-lazy-background-image="true" >
+<h3 class="comment">カリスマ美容師がいる<br>サロン</h3>
+</div>
+<div class="top-contentImage" image-lazy-src="beauti/top/img/portfolio-18.jpg?t={{timestamp}}" image-lazy-background-image="true" >
+<h3 class="comment">落ち着いた雰囲気の<br>サロン</h3>
+</div>
+<div class="top-contentImage" >
+<img image-lazy-src="beauti/top/img/mirroru_s.png?t={{timestamp}}" image-lazy-image="true">
+<div>サロンと美容師をつなぐアプリ<br>-ミラル-</div>
+</div>
+
+<div class="top-contentImage" image-lazy-src="beauti/top/img/DSC02006.jpg?t={{timestamp}}" image-lazy-background-image="true" >
+<button class="ownerBtn button button-large button-calm">
+  サロンオーナー登録はこちら
+</button>
+</div>
+<div class="top-logoffBox" >
+<button class="button button-block button-stable">
+  ログオフ
+</button>
+</div>
+</ion-content>
+
+<div id="topMyNavi" class="top-MyNave" scroll="false">
+   <button class="button button-positive" ng-click="showMyNavi()">
+     <i class="icon ion-android-apps"></i>
+   </button>
+</div>
+
+<div id="topSearchTextBox" class="bar item-input-inset searchTextBox">
+  <label class="item-input-wrapper">
+    <i class="icon ion-ios-search placeholder-icon"></i>
+    <input type="search" placeholder="駅名やサロン名で検索" ng-model="search.word">
+  </label>
+  <div class="button button-positive ion-ios-search"  ui-sref="salon-search-result">
+  </div>
+</div>
+
+</ion-side-menu-content>
+
+
+ <!-- Left menu -->
+<ion-side-menu style="" class="top-sidMenu" side="left" drag-content="false">
+<ion-item style="background-color:#000" class="item-icon-left" href="#">
+  <i class="icon ion-ios-search-strong"></i>詳しく探す
+</ion-item>
+<ion-item class="item-icon-left" href="#">
+  <i class="icon ion-ios-calendar"></i>スケジュール
+</ion-item>
+<ion-item class="item-icon-left" href="#">
+  <i class="icon ion-android-favorite"></i>お気に入り
+</ion-item>
+<ion-item class="item-icon-left" ui-sref='messagethread-list({btId:1})'>
+  <i class="icon ion-chatbubble-working"></i>コンタクト
+  <span class="badge badge-assertive">2</span>
+</ion-item>
+<ion-item class="item-icon-left" href="#">
+  <i class="icon ion-android-star"></i>あなたへのレビュー
+  <span class="badge badge-assertive">4</span>
+</ion-item>
+<ion-item class="item-icon-left" href="#">
+  <i class="icon ion-ios-home"></i>マイページ</div>
+</ion-item>
+<ion-item  style="height:100%" href="#">
+	<img image-lazy-src="beauti/top/img/mirroru_s.png?t={{::timestamp}}" image-lazy-image="true">
+</ion-item>
+</ion-side-menu>
+
+
+</ion-side-menus>
+
+
+</ion-view>

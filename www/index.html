@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- utility lib css -->
+    <link href="lib/material-design-icons-2_1/css/material-design-icons.css" rel="stylesheet">
+
+    <!-- ionic extention css -->
+    <link href="lib/ionic-ext/css/ionic-rating.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+	<!-- miral 独自のcss定義 -->
+    <link href="common/calendar1/css/calendar1.css" rel="stylesheet">
+
+    <!-- jQuery js -->
+	<script src="lib/jquery/jquery-1.11.3.min.js"></script>
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- ionic extention -->
+    <script src="lib/ionic-ext/js/ionic-image-lazy-load.js"></script>
+    <script src="lib/ionic-ext/js/ionic-rating.min.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- utility lib js -->
+    <script src="lib/date-ja-JP.js"></script>
+    <script src="lib/numeral/numeral.min.js"></script>
+    <script src="lib/numeral/ja.min.js"></script>
+    <script src="lib/math.min.js"></script>
+
+	<!-- google map -->
+ 	<script src="https://maps.googleapis.com/maps/api/js"></script>
+
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+
+	<!-- ここに新規のコントローラ、サービスを追加 -->
+    <script src="beauti/top/controllers.js"></script>
+    <script src="salon/search/result/controllers.js"></script>
+    <script src="salon/search/result/services.js"></script>
+
+    <script src="salon/detail/controllers.js"></script>
+    <script src="salon/detail/services.js"></script>
+
+	<!-- miral共通モジュール -->
+    <script src="common/mirroruUtil.js"></script>
+    <script src="common/loginInfo.js"></script>
+    <script src="common/calendar1/calendar1.js"></script>
+    <script src="common/calendar1/calendar1-services.js"></script>
+
+
+  </head>
+
+  <script type="text/javascript">
+	numeral.language('ja');
+	var cache_timestamp = new Date().getTime();
+  </script>
+
+  <body ng-app="miral">
+    <!--
+      The nav bar that will be updated as we navigate between views.
+    -->
+    <ion-nav-bar class="bar-stable">
+      <ion-nav-back-button>戻る
+      </ion-nav-back-button>
+    </ion-nav-bar>
+    <!--
+      The views will be rendered in the <ion-nav-view> directive below
+      Templates are in the /templates folder (but you could also
+      have templates inline in this html file if you'd like).
+    -->
+    <ion-nav-view></ion-nav-view>
+  </body>
+</html>

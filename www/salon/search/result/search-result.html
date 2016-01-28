@@ -1,0 +1,25 @@
+ <ion-view>
+  <ion-content lazy-scroll class="padding" >
+    <div class="list card" ng-repeat="salon in salons">
+      <div class="item item-body solon-searchListCard" image-lazy-src="img/top/portfolio-202.jpg?t={{timestamp}}" image-lazy-background-image="true"
+      	ui-sref='salon-detail({slId:salon.slId})' nav-direction="forward" nav-transition='android'>
+      		<div class="salonName" ng-class="{salonName2: $index % 2  != 0}"
+      		><span>{{::salon.slNm}}</span><span style="float:right">{{::salon.trNm}}</span>
+      		</div>
+      		 <rating style="color:red; font-size:30pt;" ng-model="salon.rating" readonly="true"></rating>
+      		
+      		<div class="footer" ng-class="{footer2: $index % 2  != 0}">
+      		<div style="padding:0px" class="row salonRentalfee">
+      		<div class="col icon-left ion-social-yen">{{::salon.rfHT}}</div>
+      		<div class="col icon-left ion-social-yen">{{::salon.rf1D}}</div>
+      		<div class="col icon-left ion-social-yen">{{::salon.rf2D}}</div>
+      		</div>
+      		<div style="padding:0px;" class="row salonRentalfee">
+      		<div style="padding:0px;font-size:9pt;" class="col">時間貸し</div>
+      		<div style="padding:0px;font-size:9pt;" class="col">１日貸し</div>
+      		<div style="padding:0px;font-size:9pt;" class="col">連日(２日以降)</div>
+      		</div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>  

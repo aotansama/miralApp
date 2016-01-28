@@ -1,0 +1,289 @@
+@charset "utf-8";
+/* Empty. Add your own CSS if you like */
+.calendar1-month{
+	margin-top:4px;
+	background-color:#2962FF;
+	color:#fff;
+	font-weight:bold;
+	font-size:13pt;
+}
+
+.calendar1-month-title-bar{
+	text-align:center;
+	padding:4px 10px;
+}
+
+
+.calendar1-month-month-title{
+	clear:both;
+}
+
+.calendar1-month-chevron-left {
+	float:left;
+}
+
+.calendar1-month-chevron-right {
+	float:right;
+}
+
+.calendar1-month-box {
+	width:100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+
+}
+.calendar1-month-box tr th{
+	padding:4px;
+	height:60px;
+	background-color:#2962FF;
+	color:#fff;
+	font-weight:bold;
+	text-align:center;
+	vertical-align: middle;
+}
+
+.calendar1-month-box tr td{
+	padding:4px;
+	height:60px;
+	text-align:center;
+	vertical-align: middle;
+	color:#448AFF;
+	background-color:#fff;
+}
+
+.calendar1-month-disabled{
+}
+.calendar1-month-disabled span{
+	color:#E0E0E0
+}
+
+.calendar1-month-holiday{
+	background-color:#FFEBEE !important;
+}
+.calendar1-month-holiday  span{
+}
+.calendar1-month-saturday{
+	background-color:#E3F2FD !important;
+}
+.calendar1-month-saturday  span{
+}
+.calendar1-month-selected {
+	background-color:#ff0000 !important;
+	color:red;
+
+}
+
+.calendar1-month-day-ng  div {
+	position:relative;
+	width:100%;
+}
+
+.calendar1-month-day-ng div .daymark {
+	position:absolute;
+	width:46px;
+	height:46px;
+	left:50%;
+	margin-left:-22px;
+	margin-top:-10px;
+	opacity:0.5;
+	font-size:44px;
+
+}
+
+.calendar1-month-day-warning  div {
+	position:relative;
+	width:100%;
+}
+
+.calendar1-month-day-warning div .daymark {
+	position:absolute;
+	width:46px;
+	height:46px;
+	left:50%;
+	margin-left:-24px;
+	margin-top:-12px;
+	opacity:0.5;
+	font-size:48px;
+}
+
+.calendar1-month-day-ok  div {
+	position:relative;
+	width:100%;
+}
+.calendar1-month-day-ok div .daymark {
+	position:absolute;
+	width:46px;
+	height:46px;
+	left:50%;
+	margin-left:-20px;
+	margin-top:-10px;
+	opacity:0.5;
+}
+
+.calendar1-month-day-none  div {
+	position:relative;
+	width:100%;
+}
+.calendar1-month-day-none div .daymark {
+	position:absolute;
+	width:46px;
+	height:46px;
+}
+
+@media (max-width: 750px) {
+
+}
+
+/*------------------------------------
+day
+--------------------------------------*/
+
+.calendar1-day-title-bar{
+	text-align:center;
+	padding:4px 10px;
+}
+
+
+.calendar1-day-title{
+	clear:both;
+}
+
+.calendar1-day-chevron-left {
+	float:left;
+}
+
+.calendar1-day-chevron-right {
+	float:right;
+}
+
+
+.calendar1-day-box {
+	border-collapse: collapse;
+	width:100%;
+}
+
+.calendar1-day-box td{
+	position:relative;
+	border:solid 1px #E0E0E0;
+}
+
+.calendar1-day-hour-box {
+	height:80px;
+	width:100px;
+}
+
+
+.calendar1-day-minute-box {
+	height:40px;
+	width:100px;
+}
+
+.calendar1-day-hour-chooser{
+	font-size:22px;
+	position:absolute;
+	left:100%;
+	margin-left:-40px;
+}
+
+.calendar1-day-minute-chooser{
+	font-size:8px;
+	position:absolute;
+	left:100%;
+	margin-left:-36px;
+}
+
+.calendar1-day-chooser-add{
+	color:#387ef5;
+}
+.calendar1-day-chooser-remove{
+	color:#FFAB91;
+}
+
+
+
+.calendar1-day-time-selected{
+	background-color:#387ef5;
+	color:#fff;
+}
+
+
+.calendar1-day-time-disabled{
+	background-color:#757575;
+	color:#fff;
+}
+
+
+.calendar1-day-schedule-color-glay {
+	background-color:#9E9E9E;
+}
+
+.calendar1-day-schedule-color-1 {
+	background-color:#FFFF8D;
+}
+.calendar1-day-schedule-color-2 {
+	background-color:#CCFF90;
+}
+
+.calendar1-day-schedule-color-3 {
+	background-color:#A7FFEB;
+}
+.calendar1-day-schedule-color-4 {
+	background-color:#EA80FC;
+}
+
+.calendar1-day-schedule-selected{
+	background-color:#387ef5;
+	color:#fff;
+}
+
+.calendar1-day-schedule-height-30-30{height:40px}
+.calendar1-day-schedule-height-30-60{height:80px}
+.calendar1-day-schedule-height-30-90{height:120px}
+.calendar1-day-schedule-height-30-120{height:160px}
+.calendar1-day-schedule-height-30-150{height:200px}
+.calendar1-day-schedule-height-30-180{height:240px}
+.calendar1-day-schedule-height-30-210{height:280px}
+.calendar1-day-schedule-height-30-240{height:320px}
+.calendar1-day-schedule-height-30-270{height:360px}
+.calendar1-day-schedule-height-30-300{height:400px}
+.calendar1-day-schedule-height-30-330{height:440px}
+.calendar1-day-schedule-height-30-360{height:480px}
+.calendar1-day-schedule-height-30-390{height:520px}
+.calendar1-day-schedule-height-30-420{height:560px}
+.calendar1-day-schedule-height-30-450{height:600px}
+.calendar1-day-schedule-height-30-480{height:640px}
+.calendar1-day-schedule-height-30-510{height:680px}
+.calendar1-day-schedule-height-30-540{height:720px}
+.calendar1-day-schedule-height-30-570{height:760px}
+.calendar1-day-schedule-height-30-600{height:800px}
+.calendar1-day-schedule-height-30-630{height:840px}
+.calendar1-day-schedule-height-30-660{height:880px}
+.calendar1-day-schedule-height-30-690{height:920px}
+.calendar1-day-schedule-height-30-720{height:960px}
+.calendar1-day-schedule-height-30-750{height:1000px}
+.calendar1-day-schedule-height-30-780{height:1040px}
+.calendar1-day-schedule-height-30-810{height:1080px}
+.calendar1-day-schedule-height-30-840{height:1120px}
+.calendar1-day-schedule-height-30-870{height:1160px}
+.calendar1-day-schedule-height-30-900{height:1200px}
+.calendar1-day-schedule-height-30-930{height:1240px}
+.calendar1-day-schedule-height-30-960{height:1280px}
+.calendar1-day-schedule-height-30-990{height:1320px}
+.calendar1-day-schedule-height-30-1020{height:1360px}
+.calendar1-day-schedule-height-30-1050{height:1400px}
+.calendar1-day-schedule-height-30-1080{height:1440px}
+.calendar1-day-schedule-height-30-1110{height:1480px}
+.calendar1-day-schedule-height-30-1140{height:1520px}
+.calendar1-day-schedule-height-30-1170{height:1560px}
+.calendar1-day-schedule-height-30-1200{height:1600px}
+.calendar1-day-schedule-height-30-1230{height:1640px}
+.calendar1-day-schedule-height-30-1260{height:1680px}
+.calendar1-day-schedule-height-30-1290{height:1720px}
+.calendar1-day-schedule-height-30-1320{height:1760px}
+.calendar1-day-schedule-height-30-1350{height:1800px}
+.calendar1-day-schedule-height-30-1380{height:1840px}
+.calendar1-day-schedule-height-30-1410{height:1880px}
+.calendar1-day-schedule-height-30-1440{height:1920px}
+
+
+.material-icons_change_history:before { content: "change_history"; }

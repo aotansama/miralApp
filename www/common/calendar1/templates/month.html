@@ -1,0 +1,337 @@
+<div>
+<ion-slide-box show-pager="false" on-slide-changed="onSlideChange($index)">
+<ion-slide  ng-repeat="m in monthCount">
+
+<div ng-if([m!=$index) class="calendar1-month"  style="width:100%">
+<div class="calendar1-month-title-bar">
+<a on-tap="_prevSlide()" class="calendar1-month-chevron-left ion-chevron-left" ng_hide="$index==0"></a>
+<span class="calendar1-month-title">{{::monthList[m].title}}</span>
+<a on-tap="_nextSlide()" class="calendar1-month-chevron-right ion-chevron-right" ng_hide="$index==monthCount.length-1"></a>
+</div>
+
+
+<table class="calendar1-month-box">
+<thead>
+<tr><th>日</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th></tr>
+</thead>
+<tbody>
+
+<!-- idx0 -->
+<tr>
+<td class="{{monthList[m].weeks[0].days[0].dayStyle}}" ng-click="_onSelectedChange(monthList[m].weeks[0].days[0])">
+<div>
+<i class="{{::monthList[m].weeks[0].days[0].dayData.stateStyle}}"></i>
+<span>{{::monthList[m].weeks[0].days[0].day}}</span>
+</div>
+</td>
+
+<td class="{{monthList[m].weeks[0].days[1].dayStyle}}" ng-click="_onSelectedChange(monthList[m].weeks[0].days[1])">
+<div>
+<i class="{{::monthList[m].weeks[0].days[1].dayData.stateStyle}}"></i>
+<span>{{::monthList[m].weeks[0].days[1].day}}</span>
+</div>
+</td>
+
+<td class="{{monthList[m].weeks[0].days[2].dayStyle}}" ng-click="_onSelectedChange(monthList[m].weeks[0].days[2])">
+<div>
+<i class="{{::monthList[m].weeks[0].days[2].dayData.stateStyle}}"></i>
+<span>{{::monthList[m].weeks[0].days[2].day}}</span>
+</div>
+</td>
+
+<td class="{{monthList[m].weeks[0].days[3].dayStyle}}" ng-click="_onSelectedChange(monthList[m].weeks[0].days[3])">
+<div>
+<i class="{{::monthList[m].weeks[0].days[3].dayData.stateStyle}}"></i>
+<span>{{::monthList[m].weeks[0].days[3].day}}</span>
+</div>
+</td>
+
+<td class="{{monthList[m].weeks[0].days[4].dayStyle}}" ng-click="_onSelectedChange(monthList[m].weeks[0].days[4])">
+<div>
+<i class="{{::monthList[m].weeks[0].days[4].dayData.stateStyle}}"></i>
+<span>{{::monthList[m].weeks[0].days[4].day}}</span>
+</div>
+</td>
+
+<td class="{{monthList[m].weeks[0].days[5].dayStyle}}" ng-click="_onSelectedChange(monthList[m].weeks[0].days[5])">
+<div>
+<i class="{{::monthList[m].weeks[0].days[5].dayData.stateStyle}}"></i>
+<span>{{::monthList[m].weeks[0].days[5].day}}</span>
+</div>
+</td>
+
+<td class="{{monthList[m].weeks[0].days[6].dayStyle}}" ng-click="_onSelectedChange(monthList[m].weeks[0].days[6])">
+<div>
+<i class="{{::monthList[m].weeks[0].days[6].dayData.stateStyle}}"></i>
+<span>{{::monthList[m].weeks[0].days[6].day}}</span>
+</div>
+</td>
+</tr>
+
+<!-- idx1 -->
+<tr>
+<td class="{{monthList[m].weeks[1].days[0].dayStyle}}" ng-click="_onSelectedChange(monthList[m].weeks[1].days[0])">
+<div>
+<i class="{{::monthList[m].weeks[1].days[0].dayData.stateStyle}}"></i>
+<span>{{::monthList[m].weeks[1].days[0].day}}</span>
+</div>
+</td>
+
+<td class="{{monthList[m].weeks[1].days[1].dayStyle}}" ng-click="_onSelectedChange(monthList[m].weeks[1].days[1])">
+<div>
+<i class="{{monthList[m].weeks[1].days[1].dayData.stateStyle}}"></i>
+<span>{{::monthList[m].weeks[1].days[1].day}}</span>
+</div>
+</td>
+
+<td class="{{monthList[m].weeks[1].days[2].dayStyle}}" ng-click="_onSelectedChange(monthList[m].weeks[1].days[2])">
+<div>
+<i class="{{::monthList[m].weeks[1].days[2].dayData.stateStyle}}"></i>
+<span>{{::monthList[m].weeks[1].days[2].day}}</span>
+</div>
+</td>
+
+<td class="{{monthList[m].weeks[1].days[3].dayStyle}}" ng-click="_onSelectedChange(monthList[m].weeks[1].days[3])">
+<div>
+<i class="{{::monthList[m].weeks[1].days[3].dayData.stateStyle}}"></i>
+<span>{{::monthList[m].weeks[1].days[3].day}}</span>
+</div>
+</td>
+
+<td class="{{monthList[m].weeks[1].days[4].dayStyle}}" ng-click="_onSelectedChange(monthList[m].weeks[1].days[4])">
+<div>
+<i class="{{::monthList[m].weeks[1].days[4].dayData.stateStyle}}"></i>
+<span>{{::monthList[m].weeks[1].days[4].day}}</span>
+</div>
+</td>
+
+<td class="{{monthList[m].weeks[1].days[5].dayStyle}}" ng-click="_onSelectedChange(monthList[m].weeks[1].days[5])">
+<div>
+<i class="{{::monthList[m].weeks[1].days[5].dayData.stateStyle}}"></i>
+<span>{{::monthList[m].weeks[1].days[5].day}}</span>
+</div>
+</td>
+
+<td class="{{monthList[m].weeks[1].days[6].dayStyle}}" ng-click="_onSelectedChange(monthList[m].weeks[1].days[6])">
+<div>
+<i class="{{::monthList[m].weeks[1].days[6].dayData.stateStyle}}"></i>
+<span>{{::monthList[m].weeks[1].days[6].day}}</span>
+</div>
+</td>
+</tr>
+
+<!-- idx2 -->
+<tr>
+<td class="{{monthList[m].weeks[2].days[0].dayStyle}}" ng-click="_onSelectedChange(monthList[m].weeks[2].days[0])">
+<div>
+<i class="{{::monthList[m].weeks[2].days[0].dayData.stateStyle}}"></i>
+<span>{{::monthList[m].weeks[2].days[0].day}}</span>
+</div>
+</td>
+
+<td class="{{monthList[m].weeks[2].days[1].dayStyle}}" ng-click="_onSelectedChange(monthList[m].weeks[2].days[1])">
+<div>
+<i class="{{::monthList[m].weeks[2].days[1].dayData.stateStyle}}"></i>
+<span>{{::monthList[m].weeks[2].days[1].day}}</span>
+</div>
+</td>
+
+<td class="{{monthList[m].weeks[2].days[2].dayStyle}}" ng-click="_onSelectedChange(monthList[m].weeks[2].days[2])">
+<div>
+<i class="{{::monthList[m].weeks[2].days[2].dayData.stateStyle}}"></i>
+<span>{{::monthList[m].weeks[2].days[2].day}}</span>
+</div>
+</td>
+
+<td class="{{monthList[m].weeks[2].days[3].dayStyle}}" ng-click="_onSelectedChange(monthList[m].weeks[2].days[3])">
+<div>
+<i class="{{::monthList[m].weeks[2].days[3].dayData.stateStyle}}"></i>
+<span>{{::monthList[m].weeks[2].days[3].day}}</span>
+</div>
+</td>
+
+<td class="{{monthList[m].weeks[2].days[4].dayStyle}}" ng-click="_onSelectedChange(monthList[m].weeks[2].days[4])">
+<div>
+<i class="{{::monthList[m].weeks[2].days[4].dayData.stateStyle}}"></i>
+<span>{{::monthList[m].weeks[2].days[4].day}}</span>
+</div>
+</td>
+
+<td class="{{monthList[m].weeks[2].days[5].dayStyle}}" ng-click="_onSelectedChange(monthList[m].weeks[2].days[5])">
+<div>
+<i class="{{::monthList[m].weeks[2].days[5].dayData.stateStyle}}"></i>
+<span>{{::monthList[m].weeks[2].days[5].day}}</span>
+</div>
+</td>
+
+<td class="{{monthList[m].weeks[2].days[6].dayStyle}}" ng-click="_onSelectedChange(monthList[m].weeks[2].days[6])">
+<div>
+<i class="{{::monthList[m].weeks[2].days[6].dayData.stateStyle}}"></i>
+<span>{{::monthList[m].weeks[2].days[6].day}}</span>
+</div>
+</td>
+</tr>
+
+<!-- idx3 -->
+<tr>
+<td class="{{monthList[m].weeks[3].days[0].dayStyle}}" ng-click="_onSelectedChange(monthList[m].weeks[3].days[0])">
+<div>
+<i class="{{::monthList[m].weeks[3].days[0].dayData.stateStyle}}"></i>
+<span>{{::monthList[m].weeks[3].days[0].day}}</span>
+</div>
+</td>
+
+<td class="{{monthList[m].weeks[3].days[1].dayStyle}}" ng-click="_onSelectedChange(monthList[m].weeks[3].days[1])">
+<div>
+<i class="{{::monthList[m].weeks[3].days[1].dayData.stateStyle}}"></i>
+<span>{{::monthList[m].weeks[3].days[1].day}}</span>
+</div>
+</td>
+
+<td class="{{monthList[m].weeks[3].days[2].dayStyle}}" ng-click="_onSelectedChange(monthList[m].weeks[3].days[2])">
+<div>
+<i class="{{::monthList[m].weeks[3].days[2].dayData.stateStyle}}"></i>
+<span>{{::monthList[m].weeks[3].days[2].day}}</span>
+</div>
+</td>
+
+<td class="{{monthList[m].weeks[3].days[3].dayStyle}}" ng-click="_onSelectedChange(monthList[m].weeks[3].days[3])">
+<div>
+<i class="{{::monthList[m].weeks[3].days[3].dayData.stateStyle}}"></i>
+<span>{{::monthList[m].weeks[3].days[3].day}}</span>
+</div>
+</td>
+
+<td class="{{monthList[m].weeks[3].days[4].dayStyle}}" ng-click="_onSelectedChange(monthList[m].weeks[3].days[4])">
+<div>
+<i class="{{::monthList[m].weeks[3].days[4].dayData.stateStyle}}"></i>
+<span>{{::monthList[m].weeks[3].days[4].day}}</span>
+</div>
+</td>
+
+<td class="{{monthList[m].weeks[3].days[5].dayStyle}}" ng-click="_onSelectedChange(monthList[m].weeks[3].days[5])">
+<div>
+<i class="{{::monthList[m].weeks[3].days[5].dayData.stateStyle}}"></i>
+<span>{{::monthList[m].weeks[3].days[5].day}}</span>
+</div>
+</td>
+
+<td class="{{monthList[m].weeks[3].days[6].dayStyle}}" ng-click="_onSelectedChange(monthList[m].weeks[3].days[6])">
+<div>
+<i class="{{::monthList[m].weeks[3].days[6].dayData.stateStyle}}"></i>
+<span>{{::monthList[m].weeks[3].days[6].day}}</span>
+</div>
+</td>
+</tr>
+
+<!-- idx4 -->
+<tr>
+<td class="{{monthList[m].weeks[4].days[0].dayStyle}}" ng-click="_onSelectedChange(monthList[m].weeks[4].days[0])">
+<div>
+<i class="{{::monthList[m].weeks[4].days[0].dayData.stateStyle}}"></i>
+<span>{{::monthList[m].weeks[4].days[0].day}}</span>
+</div>
+</td>
+
+<td class="{{monthList[m].weeks[4].days[1].dayStyle}}" ng-click="_onSelectedChange(monthList[m].weeks[4].days[1])">
+<div>
+<i class="{{::monthList[m].weeks[4].days[1].dayData.stateStyle}}"></i>
+<span>{{::monthList[m].weeks[4].days[1].day}}</span>
+</div>
+</td>
+
+<td class="{{monthList[m].weeks[4].days[2].dayStyle}}" ng-click="_onSelectedChange(monthList[m].weeks[4].days[2])">
+<div>
+<i class="{{::monthList[m].weeks[4].days[2].dayData.stateStyle}}"></i>
+<span>{{::monthList[m].weeks[4].days[2].day}}</span>
+</div>
+</td>
+
+<td class="{{monthList[m].weeks[4].days[3].dayStyle}}" ng-click="_onSelectedChange(monthList[m].weeks[4].days[3])">
+<div>
+<i class="{{::monthList[m].weeks[4].days[3].dayData.stateStyle}}"></i>
+<span>{{::monthList[m].weeks[4].days[3].day}}</span>
+</div>
+</td>
+
+<td class="{{monthList[m].weeks[4].days[4].dayStyle}}" ng-click="_onSelectedChange(monthList[m].weeks[4].days[4])">
+<div>
+<i class="{{::monthList[m].weeks[4].days[4].dayData.stateStyle}}"></i>
+<span>{{::monthList[m].weeks[4].days[4].day}}</span>
+</div>
+</td>
+
+<td class="{{monthList[m].weeks[4].days[5].dayStyle}}" ng-click="_onSelectedChange(monthList[m].weeks[4].days[5])">
+<div>
+<i class="{{::monthList[m].weeks[4].days[5].dayData.stateStyle}}"></i>
+<span>{{::monthList[m].weeks[4].days[5].day}}</span>
+</div>
+</td>
+
+<td class="{{monthList[m].weeks[4].days[6].dayStyle}}" ng-click="_onSelectedChange(monthList[m].weeks[4].days[6])">
+<div>
+<i class="{{::monthList[m].weeks[4].days[6].dayData.stateStyle}}"></i>
+<span>{{::monthList[m].weeks[4].days[6].day}}</span>
+</div>
+</td>
+</tr>
+
+<!-- idx5 -->
+<tr>
+<td class="{{monthList[m].weeks[5].days[0].dayStyle}}" ng-click="_onSelectedChange(monthList[m].weeks[5].days[0])">
+<div>
+<i class="{{::monthList[m].weeks[5].days[0].dayData.stateStyle}}"></i>
+<span>{{::monthList[m].weeks[5].days[0].day}}</span>
+</div>
+</td>
+
+<td class="{{monthList[m].weeks[5].days[1].dayStyle}}" ng-click="_onSelectedChange(monthList[m].weeks[5].days[1])">
+<div>
+<i class="{{::monthList[m].weeks[5].days[1].dayData.stateStyle}}"></i>
+<span>{{::monthList[m].weeks[5].days[1].day}}</span>
+</div>
+</td>
+
+<td class="{{monthList[m].weeks[5].days[2].dayStyle}}" ng-click="_onSelectedChange(monthList[m].weeks[5].days[2])">
+<div>
+<i class="{{::monthList[m].weeks[5].days[2].dayData.stateStyle}}"></i>
+<span>{{::monthList[m].weeks[5].days[2].day}}</span>
+</div>
+</td>
+
+<td class="{{monthList[m].weeks[5].days[3].dayStyle}}" ng-click="_onSelectedChange(monthList[m].weeks[5].days[3])">
+<div>
+<i class="{{::monthList[m].weeks[5].days[3].dayData.stateStyle}}"></i>
+<span>{{::monthList[m].weeks[5].days[3].day}}</span>
+</div>
+</td>
+
+<td class="{{monthList[m].weeks[5].days[4].dayStyle}}" ng-click="_onSelectedChange(monthList[m].weeks[5].days[4])">
+<div>
+<i class="{{::monthList[m].weeks[5].days[4].dayData.stateStyle}}"></i>
+<span>{{::monthList[m].weeks[5].days[4].day}}</span>
+</div>
+</td>
+
+<td class="{{monthList[m].weeks[5].days[5].dayStyle}}" ng-click="_onSelectedChange(monthList[m].weeks[5].days[5])">
+<div>
+<i class="{{::monthList[m].weeks[5].days[5].dayData.stateStyle}}"></i>
+<span>{{::monthList[m].weeks[5].days[5].day}}</span>
+</div>
+</td>
+
+<td class="{{monthList[m].weeks[5].days[6].dayStyle}}" ng-click="_onSelectedChange(monthList[m].weeks[5].days[6])">
+<div>
+<i class="{{::monthList[m].weeks[5].days[6].dayData.stateStyle}}"></i>
+<span>{{::monthList[m].weeks[5].days[6].day}}</span>
+</div>
+</td>
+</tr>
+
+
+</tbody>
+</table>
+</div>
+</ion-slide>
+</ion-slide-box>
+</div>

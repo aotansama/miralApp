@@ -1,0 +1,362 @@
+<div>
+<div class="calendar1-day"  style="width:100%">
+<div class="calendar1-day-title-bar">
+<a on-tap="_backPrevView()" class="calendar1-day-chevron-left ion-chevron-left" >日付の選択に戻る</a>
+<span class="calendar1-day-title">{{::title}}</span>
+</div>
+<table  style="width:100%">
+<tr>
+<td  style="width:200px">
+<table class="calendar1-day-box">
+
+<tr ng-if="timeInfo.hourMap[0]">
+<td class="{{timeInfo.hourMap[0].hourBoxStyle}}"  rowspan="2"><span>00:00</span>
+<a ng-if="timeInfo.hourMap[0].isShowHourChooer" class="{{timeInfo.hourMap[0].hourChooerStyle}}"></a>
+</td>
+<td class="{{timeInfo.hourMap[0].minutes[0].minuteBoxStyle}}"><span>00</span>
+<a ng-if="timeInfo.hourMap[0].minutes[0].isShowMinuteChooer" class="{{timeInfo.hourMap[0].minutes[0].minuteChooerStyle}}" ng-click="_onMinuteChoose(timeInfo.hourMap[0].minutes[0])"></a>
+</td>
+</tr>
+<tr ng-if="timeInfo.hourMap[0]">
+<td class="{{timeInfo.hourMap[0].minutes[1].minuteBoxStyle}}"><span>30</span>
+<a ng-if="timeInfo.hourMap[0].minutes[1].isShowMinuteChooer" class="{{timeInfo.hourMap[0].minutes[1].minuteChooerStyle}}" ng-click="_onMinuteChoose(timeInfo.hourMap[0].minutes[1])"></a>
+</td>
+</tr>
+
+<tr ng-if="timeInfo.hourMap[1]">
+<td class="{{timeInfo.hourMap[1].hourBoxStyle}}" rowspan="2"><span>01:00</span>
+<a ng-if="timeInfo.hourMap[1].isShowHourChooer" class="{{timeInfo.hourMap[1].hourChooerStyle}}"></a>
+</td>
+<td class="{{timeInfo.hourMap[1].minutes[0].minuteBoxStyle}}"><span>00</span>
+<a ng-if="timeInfo.hourMap[1].minutes[0].isShowMinuteChooer" class="{{timeInfo.hourMap[1].minutes[0].minuteChooerStyle}}" ng-click="_onMinuteChoose(timeInfo.hourMap[1].minutes[0])"></a>
+</td>
+</tr>
+<tr ng-if="timeInfo.hourMap[1]">
+<td class="{{timeInfo.hourMap[1].minutes[1].minuteBoxStyle}}"><span>30</span>
+<a ng-if="timeInfo.hourMap[1].minutes[1].isShowMinuteChooer" class="{{timeInfo.hourMap[1].minutes[1].minuteChooerStyle}}" ng-click="_onMinuteChoose(timeInfo.hourMap[1].minutes[1])"></a>
+</td>
+</tr>
+
+<tr ng-if="timeInfo.hourMap[2]">
+<td class="{{timeInfo.hourMap[2].hourBoxStyle}}" rowspan="2"><span>02:00</span>
+<a ng-if="timeInfo.hourMap[2].isShowHourChooer" class="{{timeInfo.hourMap[2].hourChooerStyle}}"></a>
+</td>
+<td class="{{timeInfo.hourMap[2].minutes[0].minuteBoxStyle}}"><span>00</span>
+<a ng-if="timeInfo.hourMap[2].minutes[0].isShowMinuteChooer" class="{{timeInfo.hourMap[2].minutes[0].minuteChooerStyle}}" ng-click="_onMinuteChoose(timeInfo.hourMap[2].minutes[0])"></a>
+</td>
+</tr>
+<tr ng-if="timeInfo.hourMap[2]">
+<td class="{{timeInfo.hourMap[2].minutes[1].minuteBoxStyle}}"><span>30</span>
+<a ng-if="timeInfo.hourMap[2].minutes[1].isShowMinuteChooer" class="{{timeInfo.hourMap[2].minutes[1].minuteChooerStyle}}" ng-click="_onMinuteChoose(timeInfo.hourMap[2].minutes[1])"></a>
+</td>
+</tr>
+
+<tr ng-if="timeInfo.hourMap[3]">
+<td class="{{timeInfo.hourMap[3].hourBoxStyle}}" rowspan="2"><span>03:00</span>
+<a ng-if="timeInfo.hourMap[3].isShowHourChooer" class="{{timeInfo.hourMap[3].hourChooerStyle}}"></a>
+</td>
+<td class="{{timeInfo.hourMap[3].minutes[0].minuteBoxStyle}}"><span>00</span>
+<a ng-if="timeInfo.hourMap[3].minutes[0].isShowMinuteChooer" class="{{timeInfo.hourMap[3].minutes[0].minuteChooerStyle}}" ng-click="_onMinuteChoose(timeInfo.hourMap[3].minutes[0])"></a>
+</td>
+</tr>
+<tr ng-if="timeInfo.hourMap[3]">
+<td class="{{timeInfo.hourMap[3].minutes[1].minuteBoxStyle}}"><span>30</span>
+<a ng-if="timeInfo.hourMap[3].minutes[1].isShowMinuteChooer" class="{{timeInfo.hourMap[3].minutes[1].minuteChooerStyle}}" ng-click="_onMinuteChoose(timeInfo.hourMap[3].minutes[1])"></a>
+</td>
+</tr>
+
+<tr ng-if="timeInfo.hourMap[4]">
+<td class="{{timeInfo.hourMap[4].hourBoxStyle}}" rowspan="2"><span>04:00</span>
+<a ng-if="timeInfo.hourMap[4].isShowHourChooer" class="{{timeInfo.hourMap[4].hourChooerStyle}}"></a>
+</td>
+<td class="{{timeInfo.hourMap[4].minutes[0].minuteBoxStyle}}"><span>00</span>
+<a ng-if="timeInfo.hourMap[4].minutes[0].isShowMinuteChooer" class="{{timeInfo.hourMap[4].minutes[0].minuteChooerStyle}}" ng-click="_onMinuteChoose(timeInfo.hourMap[4].minutes[0])"></a>
+</td>
+</tr>
+<tr ng-if="timeInfo.hourMap[4]">
+<td class="{{timeInfo.hourMap[4].minutes[1].minuteBoxStyle}}"><span>30</span>
+<a ng-if="timeInfo.hourMap[4].minutes[1].isShowMinuteChooer" class="{{timeInfo.hourMap[4].minutes[1].minuteChooerStyle}}" ng-click="_onMinuteChoose(timeInfo.hourMap[4].minutes[1])"></a>
+</td>
+</tr>
+
+<tr ng-if="timeInfo.hourMap[5]">
+<td class="{{timeInfo.hourMap[5].hourBoxStyle}}" rowspan="2"><span>05:00</span>
+<a ng-if="timeInfo.hourMap[5].isShowHourChooer" class="{{timeInfo.hourMap[5].hourChooerStyle}}"></a>
+</td>
+<td class="{{timeInfo.hourMap[5].minutes[0].minuteBoxStyle}}"><span>00</span>
+<a ng-if="timeInfo.hourMap[5].minutes[0].isShowMinuteChooer" class="{{timeInfo.hourMap[5].minutes[0].minuteChooerStyle}}" ng-click="_onMinuteChoose(timeInfo.hourMap[5].minutes[0])"></a>
+</td>
+</tr>
+<tr ng-if="timeInfo.hourMap[5]">
+<td class="{{timeInfo.hourMap[5].minutes[1].minuteBoxStyle}}"><span>30</span>
+<a ng-if="timeInfo.hourMap[5].minutes[1].isShowMinuteChooer" class="{{timeInfo.hourMap[5].minutes[1].minuteChooerStyle}}" ng-click="_onMinuteChoose(timeInfo.hourMap[5].minutes[1])"></a>
+</td>
+</tr>
+
+<tr ng-if="timeInfo.hourMap[6]">
+<td class="{{timeInfo.hourMap[6].hourBoxStyle}}" rowspan="2"><span>06:00</span>
+<a ng-if="timeInfo.hourMap[6].isShowHourChooer" class="{{timeInfo.hourMap[6].hourChooerStyle}}"></a>
+</td>
+<td class="{{timeInfo.hourMap[6].minutes[0].minuteBoxStyle}}"><span>00</span>
+<a ng-if="timeInfo.hourMap[6].minutes[0].isShowMinuteChooer" class="{{timeInfo.hourMap[6].minutes[0].minuteChooerStyle}}" ng-click="_onMinuteChoose(timeInfo.hourMap[6].minutes[0])"></a>
+</td>
+</tr>
+<tr ng-if="timeInfo.hourMap[6]">
+<td class="{{timeInfo.hourMap[6].minutes[1].minuteBoxStyle}}"><span>30</span>
+<a ng-if="timeInfo.hourMap[6].minutes[1].isShowMinuteChooer" class="{{timeInfo.hourMap[6].minutes[1].minuteChooerStyle}}" ng-click="_onMinuteChoose(timeInfo.hourMap[6].minutes[1])"></a>
+</td>
+</tr>
+
+<tr ng-if="timeInfo.hourMap[7]">
+<td class="{{timeInfo.hourMap[7].hourBoxStyle}}" rowspan="2"><span>07:00</span>
+<a ng-if="timeInfo.hourMap[7].isShowHourChooer" class="{{timeInfo.hourMap[7].hourChooerStyle}}"></a>
+</td>
+<td class="{{timeInfo.hourMap[7].minutes[0].minuteBoxStyle}}"><span>00</span>
+<a ng-if="timeInfo.hourMap[7].minutes[0].isShowMinuteChooer" class="{{timeInfo.hourMap[7].minutes[0].minuteChooerStyle}}" ng-click="_onMinuteChoose(timeInfo.hourMap[7].minutes[0])"></a>
+</td>
+</tr>
+<tr ng-if="timeInfo.hourMap[7]">
+<td class="{{timeInfo.hourMap[7].minutes[1].minuteBoxStyle}}"><span>30</span>
+<a ng-if="timeInfo.hourMap[7].minutes[1].isShowMinuteChooer" class="{{timeInfo.hourMap[7].minutes[1].minuteChooerStyle}}" ng-click="_onMinuteChoose(timeInfo.hourMap[7].minutes[1])"></a>
+</td>
+</tr>
+
+<tr ng-if="timeInfo.hourMap[8]">
+<td class="{{timeInfo.hourMap[8].hourBoxStyle}}" rowspan="2"><span>08:00</span>
+<a ng-if="timeInfo.hourMap[8].isShowHourChooer" class="{{timeInfo.hourMap[8].hourChooerStyle}}"></a>
+</td>
+<td class="{{timeInfo.hourMap[8].minutes[0].minuteBoxStyle}}"><span>00</span>
+<a ng-if="timeInfo.hourMap[8].minutes[0].isShowMinuteChooer" class="{{timeInfo.hourMap[8].minutes[0].minuteChooerStyle}}" ng-click="_onMinuteChoose(timeInfo.hourMap[8].minutes[0])"></a>
+</td>
+</tr>
+<tr ng-if="timeInfo.hourMap[8]">
+<td class="{{timeInfo.hourMap[8].minutes[1].minuteBoxStyle}}"><span>30</span>
+<a ng-if="timeInfo.hourMap[8].minutes[1].isShowMinuteChooer" class="{{timeInfo.hourMap[8].minutes[1].minuteChooerStyle}}" ng-click="_onMinuteChoose(timeInfo.hourMap[8].minutes[1])"></a>
+</td>
+</tr>
+
+<tr ng-if="timeInfo.hourMap[9]">
+<td class="{{timeInfo.hourMap[9].hourBoxStyle}}" rowspan="2"><span>09:00</span>
+<a ng-if="timeInfo.hourMap[9].isShowHourChooer" class="{{timeInfo.hourMap[9].hourChooerStyle}}"></a>
+</td>
+<td class="{{timeInfo.hourMap[9].minutes[0].minuteBoxStyle}}"><span>00</span>
+<a ng-if="timeInfo.hourMap[9].minutes[0].isShowMinuteChooer" class="{{timeInfo.hourMap[9].minutes[0].minuteChooerStyle}}" ng-click="_onMinuteChoose(timeInfo.hourMap[9].minutes[0])"></a>
+</td>
+</tr>
+<tr ng-if="timeInfo.hourMap[9]">
+<td class="{{timeInfo.hourMap[9].minutes[1].minuteBoxStyle}}"><span>30</span>
+<a ng-if="timeInfo.hourMap[9].minutes[1].isShowMinuteChooer" class="{{timeInfo.hourMap[9].minutes[1].minuteChooerStyle}}" ng-click="_onMinuteChoose(timeInfo.hourMap[9].minutes[1])"></a>
+</td>
+</tr>
+
+<tr ng-if="timeInfo.hourMap[10]">
+<td class="{{timeInfo.hourMap[10].hourBoxStyle}}" rowspan="2"><span>10:00</span>
+<a ng-if="timeInfo.hourMap[10].isShowHourChooer" class="{{timeInfo.hourMap[10].hourChooerStyle}}"></a>
+</td>
+<td class="{{timeInfo.hourMap[10].minutes[0].minuteBoxStyle}}"><span>00</span>
+<a ng-if="timeInfo.hourMap[10].minutes[0].isShowMinuteChooer" class="{{timeInfo.hourMap[10].minutes[0].minuteChooerStyle}}" ng-click="_onMinuteChoose(timeInfo.hourMap[10].minutes[0])"></a>
+</td>
+</tr>
+<tr ng-if="timeInfo.hourMap[10]">
+<td class="{{timeInfo.hourMap[10].minutes[1].minuteBoxStyle}}"><span>30</span>
+<a ng-if="timeInfo.hourMap[10].minutes[1].isShowMinuteChooer" class="{{timeInfo.hourMap[10].minutes[1].minuteChooerStyle}}" ng-click="_onMinuteChoose(timeInfo.hourMap[10].minutes[1])"></a>
+</td>
+</tr>
+
+<tr ng-if="timeInfo.hourMap[11]">
+<td class="{{timeInfo.hourMap[11].hourBoxStyle}}" rowspan="2"><span>11:00</span>
+<a ng-if="timeInfo.hourMap[11].isShowHourChooer" class="{{timeInfo.hourMap[11].hourChooerStyle}}"></a>
+</td>
+<td class="{{timeInfo.hourMap[11].minutes[0].minuteBoxStyle}}"><span>00</span>
+<a ng-if="timeInfo.hourMap[11].minutes[0].isShowMinuteChooer" class="{{timeInfo.hourMap[11].minutes[0].minuteChooerStyle}}" ng-click="_onMinuteChoose(timeInfo.hourMap[11].minutes[0])"></a>
+</td>
+</tr>
+<tr ng-if="timeInfo.hourMap[11]">
+<td class="{{timeInfo.hourMap[11].minutes[1].minuteBoxStyle}}"><span>30</span>
+<a ng-if="timeInfo.hourMap[11].minutes[1].isShowMinuteChooer" class="{{timeInfo.hourMap[11].minutes[1].minuteChooerStyle}}" ng-click="_onMinuteChoose(timeInfo.hourMap[11].minutes[1])"></a>
+</td>
+</tr>
+
+<tr ng-if="timeInfo.hourMap[12]">
+<td class="{{timeInfo.hourMap[12].hourBoxStyle}}" rowspan="2"><span>12:00</span>
+<a ng-if="timeInfo.hourMap[12].isShowHourChooer" class="{{timeInfo.hourMap[12].hourChooerStyle}}"></a>
+</td>
+<td class="{{timeInfo.hourMap[12].minutes[0].minuteBoxStyle}}"><span>00</span>
+<a ng-if="timeInfo.hourMap[12].minutes[0].isShowMinuteChooer" class="{{timeInfo.hourMap[12].minutes[0].minuteChooerStyle}}" ng-click="_onMinuteChoose(timeInfo.hourMap[12].minutes[0])"></a>
+</td>
+</tr>
+<tr ng-if="timeInfo.hourMap[12]">
+<td class="{{timeInfo.hourMap[12].minutes[1].minuteBoxStyle}}"><span>30</span>
+<a ng-if="timeInfo.hourMap[12].minutes[1].isShowMinuteChooer" class="{{timeInfo.hourMap[12].minutes[1].minuteChooerStyle}}" ng-click="_onMinuteChoose(timeInfo.hourMap[12].minutes[1])"></a>
+</td>
+</tr>
+
+<tr ng-if="timeInfo.hourMap[13]">
+<td class="{{timeInfo.hourMap[13].hourBoxStyle}}" rowspan="2"><span>13:00</span>
+<a ng-if="timeInfo.hourMap[13].isShowHourChooer" class="{{timeInfo.hourMap[13].hourChooerStyle}}"></a>
+</td>
+<td class="{{timeInfo.hourMap[13].minutes[0].minuteBoxStyle}}"><span>00</span>
+<a ng-if="timeInfo.hourMap[13].minutes[0].isShowMinuteChooer" class="{{timeInfo.hourMap[13].minutes[0].minuteChooerStyle}}" ng-click="_onMinuteChoose(timeInfo.hourMap[13].minutes[0])"></a>
+</td>
+</tr>
+<tr ng-if="timeInfo.hourMap[13]">
+<td class="{{timeInfo.hourMap[13].minutes[1].minuteBoxStyle}}"><span>30</span>
+<a ng-if="timeInfo.hourMap[13].minutes[1].isShowMinuteChooer" class="{{timeInfo.hourMap[13].minutes[1].minuteChooerStyle}}" ng-click="_onMinuteChoose(timeInfo.hourMap[13].minutes[1])"></a>
+</td>
+</tr>
+
+<tr ng-if="timeInfo.hourMap[14]">
+<td class="{{timeInfo.hourMap[14].hourBoxStyle}}" rowspan="2"><span>14:00</span>
+<a ng-if="timeInfo.hourMap[14].isShowHourChooer" class="{{timeInfo.hourMap[14].hourChooerStyle}}"></a>
+</td>
+<td class="{{timeInfo.hourMap[14].minutes[0].minuteBoxStyle}}"><span>00</span>
+<a ng-if="timeInfo.hourMap[14].minutes[0].isShowMinuteChooer" class="{{timeInfo.hourMap[14].minutes[0].minuteChooerStyle}}" ng-click="_onMinuteChoose(timeInfo.hourMap[14].minutes[0])"></a>
+</td>
+</tr>
+<tr ng-if="timeInfo.hourMap[14]">
+<td class="{{timeInfo.hourMap[14].minutes[1].minuteBoxStyle}}"><span>30</span>
+<a ng-if="timeInfo.hourMap[14].minutes[1].isShowMinuteChooer" class="{{timeInfo.hourMap[14].minutes[1].minuteChooerStyle}}" ng-click="_onMinuteChoose(timeInfo.hourMap[14].minutes[1])"></a>
+</td>
+</tr>
+
+<tr ng-if="timeInfo.hourMap[15]">
+<td class="{{timeInfo.hourMap[15].hourBoxStyle}}" rowspan="2"><span>15:00</span>
+<a ng-if="timeInfo.hourMap[15].isShowHourChooer" class="{{timeInfo.hourMap[15].hourChooerStyle}}"></a>
+</td>
+<td class="{{timeInfo.hourMap[15].minutes[0].minuteBoxStyle}}"><span>00</span>
+<a ng-if="timeInfo.hourMap[15].minutes[0].isShowMinuteChooer" class="{{timeInfo.hourMap[15].minutes[0].minuteChooerStyle}}" ng-click="_onMinuteChoose(timeInfo.hourMap[15].minutes[0])"></a>
+</td>
+</tr>
+<tr ng-if="timeInfo.hourMap[15]">
+<td class="{{timeInfo.hourMap[15].minutes[1].minuteBoxStyle}}"><span>30</span>
+<a ng-if="timeInfo.hourMap[15].minutes[1].isShowMinuteChooer" class="{{timeInfo.hourMap[15].minutes[1].minuteChooerStyle}}" ng-click="_onMinuteChoose(timeInfo.hourMap[15].minutes[1])"></a>
+</td>
+</tr>
+
+<tr ng-if="timeInfo.hourMap[16]">
+<td class="{{timeInfo.hourMap[16].hourBoxStyle}}" rowspan="2"><span>16:00</span>
+<a ng-if="timeInfo.hourMap[16].isShowHourChooer" class="{{timeInfo.hourMap[16].hourChooerStyle}}"></a>
+</td>
+<td class="{{timeInfo.hourMap[16].minutes[0].minuteBoxStyle}}"><span>00</span>
+<a ng-if="timeInfo.hourMap[16].minutes[0].isShowMinuteChooer" class="{{timeInfo.hourMap[16].minutes[0].minuteChooerStyle}}" ng-click="_onMinuteChoose(timeInfo.hourMap[16].minutes[0])"></a>
+</td>
+</tr>
+<tr ng-if="timeInfo.hourMap[16]">
+<td class="{{timeInfo.hourMap[16].minutes[1].minuteBoxStyle}}"><span>30</span>
+<a ng-if="timeInfo.hourMap[16].minutes[1].isShowMinuteChooer" class="{{timeInfo.hourMap[16].minutes[1].minuteChooerStyle}}" ng-click="_onMinuteChoose(timeInfo.hourMap[16].minutes[1])"></a>
+</td>
+</tr>
+
+<tr ng-if="timeInfo.hourMap[17]">
+<td class="{{timeInfo.hourMap[17].hourBoxStyle}}" rowspan="2"><span>17:00</span>
+<a ng-if="timeInfo.hourMap[17].isShowHourChooer" class="{{timeInfo.hourMap[17].hourChooerStyle}}"></a>
+</td>
+<td class="{{timeInfo.hourMap[17].minutes[0].minuteBoxStyle}}"><span>00</span>
+<a ng-if="timeInfo.hourMap[17].minutes[0].isShowMinuteChooer" class="{{timeInfo.hourMap[17].minutes[0].minuteChooerStyle}}" ng-click="_onMinuteChoose(timeInfo.hourMap[17].minutes[0])"></a>
+</td>
+</tr>
+<tr ng-if="timeInfo.hourMap[17]">
+<td class="{{timeInfo.hourMap[17].minutes[1].minuteBoxStyle}}"><span>30</span>
+<a ng-if="timeInfo.hourMap[17].minutes[1].isShowMinuteChooer" class="{{timeInfo.hourMap[17].minutes[1].minuteChooerStyle}}" ng-click="_onMinuteChoose(timeInfo.hourMap[17].minutes[1])"></a>
+</td>
+</tr>
+
+<tr ng-if="timeInfo.hourMap[18]">
+<td class="{{timeInfo.hourMap[18].hourBoxStyle}}" rowspan="2"><span>18:00</span>
+<a ng-if="timeInfo.hourMap[18].isShowHourChooer" class="{{timeInfo.hourMap[18].hourChooerStyle}}"></a>
+</td>
+<td class="{{timeInfo.hourMap[18].minutes[0].minuteBoxStyle}}"><span>00</span>
+<a ng-if="timeInfo.hourMap[18].minutes[0].isShowMinuteChooer" class="{{timeInfo.hourMap[18].minutes[0].minuteChooerStyle}}" ng-click="_onMinuteChoose(timeInfo.hourMap[18].minutes[0])"></a>
+</td>
+</tr>
+<tr ng-if="timeInfo.hourMap[18]">
+<td class="{{timeInfo.hourMap[18].minutes[1].minuteBoxStyle}}"><span>30</span>
+<a ng-if="timeInfo.hourMap[18].minutes[1].isShowMinuteChooer" class="{{timeInfo.hourMap[18].minutes[1].minuteChooerStyle}}" ng-click="_onMinuteChoose(timeInfo.hourMap[18].minutes[1])"></a>
+</td>
+</tr>
+
+<tr ng-if="timeInfo.hourMap[19]">
+<td class="{{timeInfo.hourMap[19].hourBoxStyle}}" rowspan="2"><span>19:00</span>
+<a ng-if="timeInfo.hourMap[19].isShowHourChooer" class="{{timeInfo.hourMap[19].hourChooerStyle}}"></a>
+</td>
+<td class="{{timeInfo.hourMap[19].minutes[0].minuteBoxStyle}}"><span>00</span>
+<a ng-if="timeInfo.hourMap[19].minutes[0].isShowMinuteChooer" class="{{timeInfo.hourMap[19].minutes[0].minuteChooerStyle}}" ng-click="_onMinuteChoose(timeInfo.hourMap[19].minutes[0])"></a>
+</td>
+</tr>
+<tr ng-if="timeInfo.hourMap[19]">
+<td class="{{timeInfo.hourMap[19].minutes[1].minuteBoxStyle}}"><span>30</span>
+<a ng-if="timeInfo.hourMap[19].minutes[1].isShowMinuteChooer" class="{{timeInfo.hourMap[19].minutes[1].minuteChooerStyle}}" ng-click="_onMinuteChoose(timeInfo.hourMap[19].minutes[1])"></a>
+</td>
+</tr>
+
+<tr ng-if="timeInfo.hourMap[20]">
+<td class="{{timeInfo.hourMap[20].hourBoxStyle}}" rowspan="2"><span>20:00</span>
+<a ng-if="timeInfo.hourMap[20].isShowHourChooer" class="{{timeInfo.hourMap[20].hourChooerStyle}}"></a>
+</td>
+<td class="{{timeInfo.hourMap[20].minutes[0].minuteBoxStyle}}"><span>00</span>
+<a ng-if="timeInfo.hourMap[20].minutes[0].isShowMinuteChooer" class="{{timeInfo.hourMap[20].minutes[0].minuteChooerStyle}}" ng-click="_onMinuteChoose(timeInfo.hourMap[20].minutes[0])"></a>
+</td>
+</tr>
+<tr ng-if="timeInfo.hourMap[20]">
+<td class="{{timeInfo.hourMap[20].minutes[1].minuteBoxStyle}}"><span>30</span>
+<a ng-if="timeInfo.hourMap[20].minutes[1].isShowMinuteChooer" class="{{timeInfo.hourMap[20].minutes[1].minuteChooerStyle}}" ng-click="_onMinuteChoose(timeInfo.hourMap[20].minutes[1])"></a>
+</td>
+</tr>
+
+<tr ng-if="timeInfo.hourMap[21]">
+<td class="{{timeInfo.hourMap[21].hourBoxStyle}}" rowspan="2"><span>21:00</span>
+<a ng-if="timeInfo.hourMap[21].isShowHourChooer" class="{{timeInfo.hourMap[21].hourChooerStyle}}"></a>
+</td>
+<td class="{{timeInfo.hourMap[21].minutes[0].minuteBoxStyle}}"><span>00</span>
+<a ng-if="timeInfo.hourMap[21].minutes[0].isShowMinuteChooer" class="{{timeInfo.hourMap[21].minutes[0].minuteChooerStyle}}" ng-click="_onMinuteChoose(timeInfo.hourMap[21].minutes[0])"></a>
+</td>
+</tr>
+<tr ng-if="timeInfo.hourMap[21]">
+<td class="{{timeInfo.hourMap[21].minutes[1].minuteBoxStyle}}"><span>30</span>
+<a ng-if="timeInfo.hourMap[21].minutes[1].isShowMinuteChooer" class="{{timeInfo.hourMap[21].minutes[1].minuteChooerStyle}}" ng-click="_onMinuteChoose(timeInfo.hourMap[21].minutes[1])"></a>
+</td>
+</tr>
+
+<tr ng-if="timeInfo.hourMap[22]">
+<td class="{{timeInfo.hourMap[22].hourBoxStyle}}" rowspan="2"><span>22:00</span>
+<a ng-if="timeInfo.hourMap[22].isShowHourChooer" class="{{timeInfo.hourMap[22].hourChooerStyle}}"></a>
+</td>
+<td class="{{timeInfo.hourMap[22].minutes[0].minuteBoxStyle}}"><span>00</span>
+<a ng-if="timeInfo.hourMap[22].minutes[0].isShowMinuteChooer" class="{{timeInfo.hourMap[22].minutes[0].minuteChooerStyle}}" ng-click="_onMinuteChoose(timeInfo.hourMap[22].minutes[0])"></a>
+</td>
+</tr>
+<tr ng-if="timeInfo.hourMap[22]">
+<td class="{{timeInfo.hourMap[22].minutes[1].minuteBoxStyle}}"><span>30</span>
+<a ng-if="timeInfo.hourMap[22].minutes[1].isShowMinuteChooer" class="{{timeInfo.hourMap[22].minutes[1].minuteChooerStyle}}" ng-click="_onMinuteChoose(timeInfo.hourMap[22].minutes[1])"></a>
+</td>
+</tr>
+
+
+<tr ng-if="timeInfo.hourMap[23]">
+<td class="{{timeInfo.hourMap[23].hourBoxStyle}}" rowspan="2"><span>23:00</span>
+<a ng-if="timeInfo.hourMap[23].isShowHourChooer" class="{{timeInfo.hourMap[23].hourChooerStyle}}"></a>
+</td>
+<td class="{{timeInfo.hourMap[23].minutes[0].minuteBoxStyle}}"><span>00</span>
+<a ng-if="timeInfo.hourMap[23].minutes[0].isShowMinuteChooer" class="{{timeInfo.hourMap[23].minutes[0].minuteChooerStyle}}" ng-click="_onMinuteChoose(timeInfo.hourMap[23].minutes[0])"></a>
+</td>
+</tr>
+<tr ng-if="timeInfo.hourMap[23]">
+<td class="{{timeInfo.hourMap[23].minutes[1].minuteBoxStyle}}"><span>30</span>
+<a ng-if="timeInfo.hourMap[23].minutes[1].isShowMinuteChooer" class="{{timeInfo.hourMap[23].minutes[1].minuteChooerStyle}}" ng-click="_onMinuteChoose(timeInfo.hourMap[23].minutes[1])"></a>
+</td>
+</tr>
+
+
+</table>
+</td>
+<td>
+<div  ng-repeat="t2 in timeInfo.times" ng-if="t2.scheduleInfo!=null || t2.blank" class="{{t2.scheduleBoxStyle}}">
+&nbsp;
+</div>
+</td>
+</tr>
+</table>
+
+
+</div>
+</div>
