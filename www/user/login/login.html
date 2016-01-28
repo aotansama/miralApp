@@ -1,0 +1,21 @@
+ <ion-view hide-nav-bar="true">
+<ion-content >
+<div class="list list-inset">
+  <label class="item item-input">
+<input type="text" ng-model="login.userid" size="12" placeholder="メールアドレス">
+  </label>
+  <label class="item item-input">
+
+<!-- ng-ifもあるが、こちらは、DOM自体展開されない、用途によって使いわけること！ -->
+<input ng-hide="isShowPassword" type="password" ng-model="login.password" size="12" placeholder="パスワード">
+<input ng-show="isShowPassword" type="text" ng-model="login.password" size="12" placeholder="パスワード">
+<div class="button button-icon icon ion-android-sunny" on-tap="onChangePasswordShow()"></div>
+  </label>
+</div>
+
+<button class="button button-block button-positive" ng-click="onLogin()">ログイン</button>
+
+<a class="button button-block button-balanced" ui-sref="beauti-regist">はじめての美容師の方はこちら</a>
+
+</ion-content>
+</ion-view>
