@@ -6,7 +6,7 @@ angular.module('miral.beauti.regist.controllers', [])
 .controller('beautiRegisControllers', function($scope) {
 
 	//初期ビュー
-	$scope.viewNo = 1;
+	$scope.viewNo = "1";
 
 
 

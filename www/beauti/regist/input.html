@@ -1,0 +1,25 @@
+ <ion-view>
+<ion-header-bar align-title="left" class="bar-positive bar-subheader">
+ナビゲータ表示、今どこにいるのか？
+</ion-header-bar>
+<div ng-switch="viewNo">
+<ion-content ng-switch-when="1">
+
+	<ion-list>
+	  <ion-radio ng-model="hederColor" ng-value="'calm'">calm</ion-radio>
+	  <ion-radio ng-model="hederColor" ng-value="'balanced'">balanced</ion-radio>
+	</ion-list>
+
+
+	<button class="button button-positive" ng-click="onBasicNextBtn()">
+	  次へ
+	</button>
+</ion-content>
+
+<ion-content ng-switch-when="2">
+<button class="button button-positive" ng-click="onRegistBtn()">
+  登録
+</button>
+</ion-content>
+</div>
+</ion-view>

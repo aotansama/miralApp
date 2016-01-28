@@ -5,7 +5,10 @@
 // the 2nd parameter is an array of 'requires'
 angular.module('miral', ['ionic','ngAnimate', 'ionicLazyLoad', 'ionic.rating'
                          ,'miral.user.login.controllers'
+
                          ,'miral.beauti.top.controllers'
+                         ,'miral.beauti.regist.controllers'
+
                          ,'miral.salon.search.result.controllers'
                          ,'miral.salon.detail.controllers'
 ])
@@ -63,8 +66,8 @@ angular.module('miral', ['ionic','ngAnimate', 'ionicLazyLoad', 'ionic.rating'
   //美容師 新規登録画面
   .state('beauti-regist', {
 	    url: '/beauti/regist',
-	    templateUrl: 'beauti/regist/main.html',
-	    controller: 'beautiTopCtrl'
+	    templateUrl: 'beauti/regist/input.html',
+	    controller: 'beautiRegisControllers'
 	  })
 
   ///////////////////////////////////////////////////////
