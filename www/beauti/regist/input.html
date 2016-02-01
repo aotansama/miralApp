@@ -1,25 +1,35 @@
  <ion-view>
-<ion-header-bar align-title="left" class="bar-positive bar-subheader">
+<ion-header-bar align-title="left" ng-class="getHeaderClass()">
 ナビゲータ表示、今どこにいるのか？
 </ion-header-bar>
 <div ng-switch="viewNo">
+
+<!-- １ページ目 -->
 <ion-content ng-switch-when="1">
-
 	<ion-list>
-	  <ion-radio ng-model="hederColor" ng-value="'calm'">calm</ion-radio>
-	  <ion-radio ng-model="hederColor" ng-value="'balanced'">balanced</ion-radio>
+	  <ion-radio ng-model="prop.headerColor" value="calm">calm</ion-radio>
+	  <ion-radio ng-model="prop.headerColor" value="balanced">balanced</ion-radio>
+	  <ion-radio ng-model="prop.headerColor" value="positive">positive</ion-radio>
 	</ion-list>
-
-
 	<button class="button button-positive" ng-click="onBasicNextBtn()">
 	  次へ
 	</button>
 </ion-content>
 
+<!-- ２ページ目 -->
 <ion-content ng-switch-when="2">
-<button class="button button-positive" ng-click="onRegistBtn()">
-  登録
-</button>
+
+	<div class="list">
+	  <label class="item item-stacked-label">
+	    <span class="input-label">Header Color</span>
+	    <p>{{::prop.headerColor}}</p>
+	  </label>
+	</div>
+
+	<button class="button button-positive" ng-click="">
+	  登録
+	</button>
+
 </ion-content>
 </div>
 </ion-view>
