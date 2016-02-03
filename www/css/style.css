@@ -146,7 +146,21 @@ Beauti mypage
 	background-color: #FFF;
 }
 
+.mypage-button-area  {
+	width:100%;
+}
 
+
+.mypage-button-area .button {
+	float:left;
+	margin:2%;
+	width:46%;
+}
+
+.mypage-info dl {
+	height: 30px;
+	margin:0px 0px 10px;
+}
 
 /*************************************
 Salon searchListCard

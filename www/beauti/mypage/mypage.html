@@ -1,34 +1,91 @@
 <ion-view hide-nav-bar="true">
 <ion-content >
 
-  <div>
-  	<ion-slide-box does-continue="true" auto-play="true" >
-		  <ion-slide ng-repeat="image in salon.imagelist">
-			<div class="slideImgCmt"><p>{{::image.cmt}}</p></div>
-			<img class="slideImg"" ng-src="{{::image.path}}?t={{::timestamp}}">
-		  </ion-slide>
-	</ion-slide-box>
- </div>
 
-<div class="card">
-  <div class="item item-divider beauti-mypageListColor">
-    氏名
+<div>
+    <a class="item item-avatar" ui-sref="beauti-detail">
+      <img src="beauti/mypage/img/user.jpg">
+      <h2>本田 涼子さん</h2>
+      <p> プロフィールを確認</p>
+    </a>
+    <a class="item mypage-info" href="#">
+      <p><i class="ion-information-circled" style="color:#387EF5"></i> 未読のお知らせが１件あります</p>
+    </a>
+</div>
+
+<div class="mypage-button-area">
+	<button class="button button-positive" href="#">
+	<i class="icon ion-android-contact"></i>
+	  コンタクト
+	</button>
+	<button class="button button-positive">
+	<i class="icon ion-android-alert"></i>
+	  お知らせ
+	</button>
+	<button class="button button-positive">
+	<i class="icon ion-android-favorite"></i>
+	  お気に入り
+	</button>
+	<button class="button button-positive">
+	<i class="icon ion-android-settings"></i>
+	  設定
+	</button>
+</div>
+
+<div style=clear:both; >
+
+<div class="list">
+  <div class="item item-divider">
+    お知らせ
   </div>
-  <div class="item item-text-wrap">
-    本間 健太郎
+  <div class="item mypage-info">
+   <dl>
+	   <dd>2016年4月1日</dd>
+	   <dt>お知らせ</dt>
+   </dl>
   </div>
-  <div class="item item-divider beauti-mypageListColor">
-    職業
+  <div class="item mypage-info">
+   <dl>
+	   <dd>2016年3月31日</dd>
+	   <dt>お知らせ</dt>
+   </dl>
   </div>
-  <div class="item item-text-wrap">
-    スタイリスト
+  <div class="item mypage-info">
+   <dl>
+	   <dd>2016年3月24日</dd>
+	   <dt>お知らせ</dt>
+   </dl>
   </div>
-  <div class="item item-divider beauti-mypageListColor">
-    経歴
+ <div class="item mypage-info">
+	<p>お知らせをすべて表示する</p>
   </div>
-  <div class="item item-text-wrap">
-    10年
+</div>
+
+<div class="list">
+  <div class="item item-divider">
+    利用履歴
   </div>
+    <a class="item item-thumbnail-left" href="#">
+      <img src="beauti/mypage/img/user.jpg">
+      <h2>share salon</h2>
+      <p>利用日:2016年5月15日</p>
+      <p>詳細</p>
+    </a>
+    <a class="item item-thumbnail-left" href="#">
+      <img src="beauti/mypage/img/user.jpg">
+      <h2>share salon</h2>
+      <p>利用日:2016年4月1日</p>
+      <p>詳細</p>
+    </a>
+    <a class="item item-thumbnail-left" href="#">
+      <img src="beauti/mypage/img/user.jpg">
+      <h2>share salon</h2>
+      <p>利用日:2016年3月9日</p>
+      <p>詳細</p>
+    </a>
+    <a class="item" href="#">
+      <p>利用履歴をすべて表示する</p>
+    </a>
 </div>
 
 </ion-content>
