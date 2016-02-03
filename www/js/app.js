@@ -8,6 +8,8 @@ angular.module('miral', ['ionic','ngAnimate', 'ionicLazyLoad', 'ionic.rating'
 
                          ,'miral.beauti.top.controllers'
                          ,'miral.beauti.regist.controllers'
+                         ,'miral.beauti.detail.controllers'
+                         ,'miral.beauti.mypage.controllers'
 
                          ,'miral.salon.search.result.controllers'
                          ,'miral.salon.detail.controllers'
@@ -68,6 +70,20 @@ angular.module('miral', ['ionic','ngAnimate', 'ionicLazyLoad', 'ionic.rating'
 	    url: '/beauti/regist',
 	    templateUrl: 'beauti/regist/input.html',
 	    controller: 'beautiRegisControllers'
+	  })
+
+  //美容師 詳細画面
+  .state('beauti-detail', {
+	    url: '/beauti/detail',
+	    templateUrl: 'beauti/detail/detail.html',
+	    controller: 'beautiDetailControllers'
+	  })
+
+  //美容師 マイページ
+  .state('beauti-mypage', {
+	    url: '/beauti/mypage',
+	    templateUrl: 'beauti/mypage/mypage.html',
+	    controller: 'beautiMypageControllers'
 	  })
 
   ///////////////////////////////////////////////////////

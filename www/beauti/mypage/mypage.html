@@ -1,0 +1,35 @@
+<ion-view hide-nav-bar="true">
+<ion-content >
+
+  <div>
+  	<ion-slide-box does-continue="true" auto-play="true" >
+		  <ion-slide ng-repeat="image in salon.imagelist">
+			<div class="slideImgCmt"><p>{{::image.cmt}}</p></div>
+			<img class="slideImg"" ng-src="{{::image.path}}?t={{::timestamp}}">
+		  </ion-slide>
+	</ion-slide-box>
+ </div>
+
+<div class="card">
+  <div class="item item-divider beauti-mypageListColor">
+    氏名
+  </div>
+  <div class="item item-text-wrap">
+    本間 健太郎
+  </div>
+  <div class="item item-divider beauti-mypageListColor">
+    職業
+  </div>
+  <div class="item item-text-wrap">
+    スタイリスト
+  </div>
+  <div class="item item-divider beauti-mypageListColor">
+    経歴
+  </div>
+  <div class="item item-text-wrap">
+    10年
+  </div>
+</div>
+
+</ion-content>
+</ion-view>
