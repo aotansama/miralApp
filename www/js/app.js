@@ -86,6 +86,13 @@ angular.module('miral', ['ionic','ngAnimate', 'ionicLazyLoad', 'ionic.rating'
 	    controller: 'beautiMypageControllers'
 	  })
 
+  //美容師 美容師情報変更
+  .state('beauti-mypage-rpopmodify', {
+	    url: '/beauti/mypage/rpopmodify',
+	    templateUrl: 'beauti/mypage/rpopmodify.html',
+	    controller: 'beautiMypageControllers'
+	  })
+
   ///////////////////////////////////////////////////////
   //カテゴリ：サロン
 

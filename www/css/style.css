@@ -163,6 +163,27 @@ Beauti mypage
 }
 
 /*************************************
+Beauti mypage rpopmodify
+**************************************/
+
+
+.beauti-mypage-rpopmodify-table {
+	margin:0px 2%;
+	width:100%;
+}
+
+.beauti-mypage-rpopmodify-table th {
+	width:20%;
+	background-color: #F8F8F8;
+	height: 15px;
+}
+
+.beauti-mypage-rpopmodify-table td {
+	width:60%;
+	height: 30px;
+}
+
+/*************************************
 Salon searchListCard
 **************************************/
 .solon-searchListCard {

@@ -1,0 +1,168 @@
+<ion-view>
+<div ng-switch="viewNo">
+
+<!-- 1ページ目 -->
+<ion-content ng-switch-when="1">
+
+	<h3>登録情報の変更</h3>
+
+<table class="beauti-mypage-rpopmodify-table">
+	<tr>
+		<th colspan="2">お名前 (全角)</th>
+		<td>本間 涼子</td>
+	</tr>
+	<tr>
+		<th colspan="2">お名前 (ふりがな)</th>
+		<td>ほんま りょうこ</td>
+	</tr>
+	<tr>
+		<th colspan="2">性別</th>
+		<td>Ryoko-H@miral.com</td>
+	</tr>
+	<tr>
+		<th colspan="2">電話番号</th>
+		<td>090-0000-1111</td>
+	</tr>
+	<tr>
+		<th rowspan="5">住所</th>
+		<th>郵便番号</th>
+		<td>100-0001</td>
+	</tr>
+	<tr>
+		<th>都道府県</th>
+		<td>東京都</td>
+	</tr>
+	<tr>
+		<th>市区町村</th>
+		<td>千代田区</td>
+	</tr>
+	<tr>
+		<th>番地</th>
+		<td>1-1-1</td>
+	</tr>
+	<tr>
+		<th>ビル/マンション</th>
+		<td>千代田マンション</td>
+	</tr>
+	<tr>
+		<th colspan="2">現在の勤務状況</th>
+		<td>離職中</td>
+	</tr>
+	<tr>
+		<th colspan="2">現在の職種・技術ランク</th>
+		<td>スタイリスト</td>
+	</tr>
+	<tr>
+		<th rowspan="2">卒業校</th>
+		<th>学校名</th>
+		<td>東京美容専門学校</td>
+	</tr>
+	<tr>
+		<th>卒業年月</th>
+		<td>2005年3月</td>
+	</tr>
+	<tr>
+		<th colspan="2">美容師免許</th>
+		<td>所持</td>
+	</tr>
+	<tr>
+		<th colspan="2">管理美容師免許</th>
+		<td>なし</td>
+	</tr>
+</table>
+
+
+	<button class="button button-block button-positive" ng-click="onBasicNextBtn()">
+	  確認画面へ
+	</button>
+</ion-content>
+
+<!-- 2ページ目 -->
+<ion-content ng-switch-when="2">
+	<h3>変更内容の確認</h3>
+
+<table class="beauti-mypage-rpopmodify-table">
+	<tr>
+		<th colspan="2">お名前 (全角)</th>
+		<td>本間 涼子</td>
+	</tr>
+	<tr>
+		<th colspan="2">お名前 (ふりがな)</th>
+		<td>ほんま りょうこ</td>
+	</tr>
+	<tr>
+		<th colspan="2">性別</th>
+		<td>Ryoko-H@miral.com</td>
+	</tr>
+	<tr>
+		<th colspan="2">電話番号</th>
+		<td>090-0000-1111</td>
+	</tr>
+	<tr>
+		<th rowspan="5">住所</th>
+		<th>郵便番号</th>
+		<td>100-0001</td>
+	</tr>
+	<tr>
+		<th>都道府県</th>
+		<td>東京都</td>
+	</tr>
+	<tr>
+		<th>市区町村</th>
+		<td>千代田区</td>
+	</tr>
+	<tr>
+		<th>番地</th>
+		<td>1-1-1</td>
+	</tr>
+	<tr>
+		<th>ビル/マンション</th>
+		<td>千代田マンション</td>
+	</tr>
+	<tr>
+		<th colspan="2">現在の勤務状況</th>
+		<td>離職中</td>
+	</tr>
+	<tr>
+		<th colspan="2">現在の職種・技術ランク</th>
+		<td>スタイリスト</td>
+	</tr>
+	<tr>
+		<th rowspan="2">卒業校</th>
+		<th>学校名</th>
+		<td>東京美容専門学校</td>
+	</tr>
+	<tr>
+		<th>卒業年月</th>
+		<td>2005年3月</td>
+	</tr>
+	<tr>
+		<th colspan="2">美容師免許</th>
+		<td>所持</td>
+	</tr>
+	<tr>
+		<th colspan="2">管理美容師免許</th>
+		<td>なし</td>
+	</tr>
+</table>
+	<button class="button button-block button-positive" ng-click="onBasicNextBtn2()">
+	  変更内容を登録
+	</button>
+
+</ion-content>
+
+<!-- 3ページ目 -->
+<ion-content ng-switch-when="3">
+<h3>登録完了</h3>
+<p>変更内容を登録致しました。</p>
+	<button class="button button-block button-positive" ui-sref="beauti-mypage">
+	  マイページへ戻る
+	</button>
+
+</ion-content>
+
+
+</div>
+</ion-view>
+
+
