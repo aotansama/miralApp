@@ -1,87 +1,196 @@
 <ion-view>
 <div ng-switch="viewNo">
 
+
 <!-- 1ページ目 -->
-<ion-content ng-switch-when="1">
+<ion-content ng-switch-when="1" class="padding beautiMypageRpopmodify">
 
 	<h3>登録情報の変更</h3>
+	<p>変更する内容ご入力ください。</p>
 
-<table class="beauti-mypage-rpopmodify-table">
+<table>
 	<tr>
 		<th colspan="2">お名前 (全角)</th>
-		<td>本間 涼子</td>
+		<td class="seimei">
+			<span>姓</span><input type="textbox" value="本間" style="width:30%">
+			<span>名</span><input type="textbox" value="涼子" style="width:30%">
+		</td>
 	</tr>
 	<tr>
 		<th colspan="2">お名前 (ふりがな)</th>
-		<td>ほんま りょうこ</td>
+		<td class="seimei">
+			<span>せい</span><input type="textbox" value="ほんま" style="width:30%">
+			<span>めい</span><input type="textbox" value="りょうこ" style="width:30%">
+		</td>
 	</tr>
 	<tr>
 		<th colspan="2">性別</th>
-		<td>Ryoko-H@miral.com</td>
+		<td>
+			<input type="radio" name="sex" value="男" id="men" />
+		    <label for="men" class="radio">男</label>
+
+		    <input type="radio" name="sex" value="女" id="women" />
+		    <label for="women" class="radio">女</label>
+		</td>
+	</tr>
+	<tr>
+		<th colspan="2">生年月日</th>
+		<td class="mypageselect">
+			西暦
+			<label>
+				<select name="year">
+					<option value="1990">1990
+				</select>
+			</label>年
+			<label>
+				<select name="month">
+					<option value="11">11
+				</select>
+			</label>月
+			<label>
+				<select name="day">
+					<option value="1">1
+				</select>
+			</label>日
+		</td>
 	</tr>
 	<tr>
 		<th colspan="2">電話番号</th>
-		<td>090-0000-1111</td>
+		<td>
+			<input type="textbox" value="09000001111" style="width:80%;">
+		</td>
 	</tr>
 	<tr>
-		<th rowspan="5">住所</th>
+		<th colspan="2">メールアドレス</th>
+		<td>
+		<input type="textbox" value="Ryoko-H@miral.com" style="width:80%;"></td>
+	</tr>
+	<tr>
+		<th rowspan="5" style="vertical-align:middle;">住所</th>
 		<th>郵便番号</th>
-		<td>100-0001</td>
+		<td>
+			<input type="textbox" value="100" size="1">-
+			<input type="textbox" value="0001" size="2">
+		</td>
 	</tr>
 	<tr>
 		<th>都道府県</th>
-		<td>東京都</td>
+		<td class="mypageselect">
+			<label>
+			<select name="year">
+				<option value="東京都">東京都
+			</select>
+			</label>
+		</td>
 	</tr>
 	<tr>
 		<th>市区町村</th>
-		<td>千代田区</td>
+		<td>
+			<input type="textbox" value="千代田区" style="width:80%;">
+		</td>
 	</tr>
 	<tr>
 		<th>番地</th>
-		<td>1-1-1</td>
+		<td>
+			<input type="textbox" value="1-1-1" style="width:80%;">
+		</td>
 	</tr>
 	<tr>
 		<th>ビル/マンション</th>
-		<td>千代田マンション</td>
+		<td>
+			<input type="textbox" value="千代田レジデンス309" style="width:80%;">
+		</td>
 	</tr>
 	<tr>
 		<th colspan="2">現在の勤務状況</th>
-		<td>離職中</td>
+		<td class="mypageselect">
+			<label>
+			<select name="">
+				<option value="現職中">現職中
+				<option value="離職中">離職中
+				<option value="在学中">在学中
+			</select>
+			</label>
+		</td>
+
 	</tr>
 	<tr>
 		<th colspan="2">現在の職種・技術ランク</th>
-		<td>スタイリスト</td>
+		<td class="mypageselect">
+			<label>
+			<select name="kind">
+				<option value="スタイリスト">スタイリスト
+				<option value=”アシスタント">アシスタント
+				<option value="新卒生">新卒生
+				<option value="見習い">見習い
+				<option value="フロント">フロント
+				<option value="ヘアメイク">ヘアメイク
+				<option value="カラーリスト">カラーリスト
+				<option value="アイデザイナー">アイデザイナー
+				<option value="ネイリスト">ネイリスト
+				<option value="エステティシャン">エステティシャン
+				<option value="その他">その他
+			</select>
+			</label>
+		</td>
 	</tr>
 	<tr>
-		<th rowspan="2">卒業校</th>
+		<th rowspan="2" style="vertical-align:middle;">卒業校</th>
 		<th>学校名</th>
-		<td>東京美容専門学校</td>
+		<td>
+			<input type="textbox" value="東京美容専門学校" style="width:80%;">
+		</td>
 	</tr>
 	<tr>
 		<th>卒業年月</th>
-		<td>2005年3月</td>
+		<td class="mypageselect">
+			<label>
+			<select name="year">
+				<option value="2010">2010
+			</select>
+			</label>年
+			<label>
+			<select name="month">
+				<option value="3">3
+			</select>
+			</label>月
+		</td>
 	</tr>
 	<tr>
 		<th colspan="2">美容師免許</th>
-		<td>所持</td>
+		<td class="mypageselect">
+			<label>
+			<select name="license1">
+				<option value="所持">所持
+				<option value="未所持">未所持
+			</select>
+			</label>
+		</td>
 	</tr>
 	<tr>
 		<th colspan="2">管理美容師免許</th>
-		<td>なし</td>
+		<td class="mypageselect">
+			<label>
+			<select name="license1">
+				<option value="所持">所持
+				<option value="未所持">未所持
+			</select>
+			</label>
+		</td>
 	</tr>
 </table>
 
-
-	<button class="button button-block button-positive" ng-click="onBasicNextBtn()">
+	<button class="button button-block button-positive" ng-click="RpopmodifyNextBtn()">
 	  確認画面へ
 	</button>
+
 </ion-content>
 
 <!-- 2ページ目 -->
-<ion-content ng-switch-when="2">
+<ion-content ng-switch-when="2" class="padding beautiMypageRpopmodify">
 	<h3>変更内容の確認</h3>
-
-<table class="beauti-mypage-rpopmodify-table">
+	<p>変更する内容をご確認ください</p>
+<table>
 	<tr>
 		<th colspan="2">お名前 (全角)</th>
 		<td>本間 涼子</td>
@@ -142,25 +251,25 @@
 	</tr>
 	<tr>
 		<th colspan="2">管理美容師免許</th>
-		<td>なし</td>
+		<td>未所持</td>
 	</tr>
 </table>
-	<button class="button button-block button-positive" ng-click="onBasicNextBtn2()">
-	  変更内容を登録
+	<button class="button button-block button-positive" ng-click="RpopmodifyNextBtn2()">
+	  変更内容を登録する
 	</button>
-
+	<button class="button button-block button-" ng-click="RpopmodifyBackBtn()">
+	  入力した内容を修正する
+	</button>
 </ion-content>
 
 <!-- 3ページ目 -->
-<ion-content ng-switch-when="3">
+<ion-content ng-switch-when="3" class="padding beautiMypageRpopmodify">
 <h3>登録完了</h3>
-<p>変更内容を登録致しました。</p>
+<p>変更内容の登録が完了致しました。</p>
 	<button class="button button-block button-positive" ui-sref="beauti-mypage">
 	  マイページへ戻る
 	</button>
-
 </ion-content>
-
 
 </div>
 </ion-view>

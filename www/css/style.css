@@ -150,7 +150,6 @@ Beauti mypage
 	width:100%;
 }
 
-
 .mypage-button-area .button {
 	float:left;
 	margin:2%;
@@ -165,22 +164,71 @@ Beauti mypage
 /*************************************
 Beauti mypage rpopmodify
 **************************************/
+.beautiMypageRpopmodify table {
+	width:110%;
+	margin:0px -11px;
 
-
-.beauti-mypage-rpopmodify-table {
-	margin:0px 2%;
-	width:100%;
 }
 
-.beauti-mypage-rpopmodify-table th {
+.beautiMypageRpopmodify table tr {
+	border:solid #ddd 1px;}
+
+.beautiMypageRpopmodify table th {
 	width:20%;
-	background-color: #F8F8F8;
-	height: 15px;
+	padding:10px;
 }
 
-.beauti-mypage-rpopmodify-table td {
+.beautiMypageRpopmodify table td {
 	width:60%;
 	height: 30px;
+	padding:10px;
+}
+
+.beautiMypageRpopmodify input[type="textbox"] {
+	border:none;
+	height:30px;
+	color:#444;
+	text-align: left;
+}
+
+.beautiMypageRpopmodify span {
+	display:inline-block;
+}
+
+.beautiMypageRpopmodify .seimei span{
+	display:inline-block;
+	width:30px;
+}
+
+.beautiMypageRpopmodify select {
+	position: relative;
+	padding: 10px 20px 10px 10px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border: none;
+}
+
+.beautiMypageRpopmodify label {
+	position: relative;
+}
+
+.mypageselect select::-ms-expand {
+    display: none; }
+
+.mypageselect label:after {
+    position: absolute;
+    top: 50%;
+    right: 7px;
+    margin-top: -3px;
+    width: 0;
+    height: 0;
+    border-top: 5px solid;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    color: #999;
+    content: "";
+    pointer-events: none;
 }
 
 /*************************************
